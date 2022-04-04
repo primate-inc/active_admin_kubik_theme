@@ -1,0 +1,123 @@
+@import '../elements/_inputs.scss';
+@import '../elements/_buttons.scss';
+@import '../elements/_forms.scss';
+%admin_form_basics {
+  legend {
+    @extend %label;
+  }
+  fieldset {
+    border: none;
+    &.actions {
+      padding-top: 1em;
+      ol {
+        display: flex;
+        align-items: center;
+        .input_action {
+          margin-right: 1em;
+        }
+      }
+    }
+    > ol {
+      list-style-type: none;
+      padding: 0; margin: 0;
+      > li {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: column;
+        margin-bottom: 1.5em;
+        &.error { flex-wrap: wrap; }
+        &.boolean label {}
+        &.input_action input { @include button; }
+        &.file_modified {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 1em;
+          input {
+            position: absolute; width: 0.1px; height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            z-index: -1;
+            & + label {
+              @extend %button;
+              flex: 1 0 200px;
+              display: inline-block;
+              width: 45%;
+            }
+          }
+          .file_name {
+            width: 45%; padding-left: .5em;
+            color: var(--kubik-interface-color-brand-400);
+          }
+        }
+        &.boolean {
+          label {
+            @extend %label;
+          }
+        }
+        .inline-hints {
+          @extend %hint;
+
+          img {
+            margin-left: -0.5em;
+          }
+        }
+        // Don't include &.input here as it has unintended consequenses
+        &.password, &.email, &.string, &.select, &.text, &.number, &.datepicker, &.phone, &.country, &.time_picker, &.url, &.file {
+          & > label {
+            width: auto;
+          }
+          label {
+            @extend %label;
+          }
+          & > input {
+            width: 100%;
+          }
+          input {
+            @extend %admin_text_input_field;
+          }
+          input[type='file']::-webkit-file-upload-button {
+            visibility: hidden;
+          }
+          input[type='file'] {
+            padding: 0;
+            background-color: white; color: var(--kubik-interface-color-brand-400);
+            border-bottom: none;
+            cursor: pointer;
+
+            &:before {
+              content: 'Upload';
+              @extend %button;
+            }
+          }
+          select {
+            @extend %text_input_field;
+          }
+          textarea {
+            @extend %admin_text_input_field;
+            height: 10em; width: 100%;
+          }
+
+        }
+        .field_with_errors {
+          &:nth-child(1) {
+            flex: 1 0;
+            margin-right: 1em;
+          }
+          &:nth-child(2) {
+            flex: 1 0 50px;
+          }
+          label { color: var(--kubik-interface-color-alert); }
+          input { border-color: var(--kubik-interface-color-alert); width: 100%;}
+          select { border-color: var(--kubik-interface-color-alert); width: 100%;}
+        }
+        .inline-errors {
+          flex-basis: 100%;
+          margin: 0 0 15px 0;
+          color: var(--kubik-interface-color-alert);
+        }
+      }
+    }
+  }
+}
+

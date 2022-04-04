@@ -1,0 +1,31 @@
+{
+  "name": "active_admin_kubik",
+  "version": "0.1.0",
+  "source": [
+    "src/stylesheets/index.js",
+    "src/javascripts/index.js"
+  ],
+  "targets": {
+    "css": {
+      "source": "src/stylesheets/index.js",
+      "distDir": "./app/assets/stylesheets/"
+    },
+    "js": {
+      "source": "src/javascripts/active_admin_kubik.js",
+      "distDir": "./app/assets/javascripts/"
+    }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "watch": "parcel watch"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

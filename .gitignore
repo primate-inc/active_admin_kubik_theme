@@ -1,0 +1,16 @@
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/node_modules
+/package-lock.json
+/.parcel-cache
+app/assets/javascripts/clear_webpack_output
+dist/
+
+spec/active_admin_slickr_test/tmp

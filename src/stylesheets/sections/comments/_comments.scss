@@ -1,0 +1,127 @@
+@import '../../base/_fonts.scss';
+@import '../../elements/_forms.scss';
+@import '../../elements/_inputs.scss';
+@import '../../elements/_links.scss';
+.comments.panel {
+  background: var(--kubik-interface-color-grey-100);
+  .inputs {
+    background: transparent;
+    margin: .5rem 1.75rem 1rem;
+    .input {
+      background: transparent;
+    }
+
+  }
+  h3 {
+    @extend .subtitle;
+    padding: 2em 0 0 1.75rem; margin-bottom: 1rem;
+    border-bottom: none;
+  }
+
+  .formtastic {
+    border: 0;
+    border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+    margin-bottom: 2rem;
+    ol { border: 0; }
+    .input.text textarea {
+       background: white;
+    }
+  }
+
+  .panel_contents {
+    span.empty {
+      display: block; padding: 2em 2em 0;
+    }
+    form {
+      padding: 0;
+
+      textarea {
+        @extend %text_input_field;
+        max-width: 36rem;
+      }
+    }
+    form.active_admin_comment {
+      .input {
+        padding: 0;
+      }
+      fieldset.actions {
+        margin: 0;
+        padding: 0 1.75rem;
+        ol { padding-top: 0; }
+      }
+    }
+
+    .active_admin_comment:not(form) {
+      background-color: white;
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+      &:first-of-type {
+        border-top: 1px solid var(--kubik-interface-color-grey-200);
+      }
+
+      p { margin: .75em 0; }
+
+      .inputs, .actions {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .inputs {
+        margin: 0;
+        padding: 0 1.75rem;
+      }
+      .input {
+        padding: 0;
+        margin-bottom: 1.75rem;
+        textarea {
+          max-width: 40rem;
+        }
+      }
+      .active_admin_comment_body {
+        @extend .para;
+        max-width: 50rem;
+      }
+      .active_admin_comment_meta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        & > span, & > a {
+          @extend .para_small_style;
+        }
+        & > span { display: inline-block; margin-right: 1em }
+
+        .active_admin_comment_author {
+          @extend .h4;
+          flex: 1 1 80%;
+          order: 0;
+          margin: .25em 0;
+          a {
+            color: var(--kubik-interface-color-brand-400);
+            order: 1;
+            transition: 0.2s;
+            &:hover {
+              color: var(--kubik-interface-color-brand-400);
+            }
+          }
+        }
+        span {
+          @extend %hint;
+          order: 2;
+          flex: 0 0 100%;
+          padding: 0;
+          margin: 0;
+        }
+        span + a {
+          @extend %general_link;
+        }
+      }
+    }
+    .pagination_information {
+      @extend .para;
+      padding: 1rem 0 0 2em;
+      color: var(--kubik-interface-color-grey-400);
+    }
+  }
+}
+

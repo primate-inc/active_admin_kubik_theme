@@ -1,0 +1,67 @@
+import './arbre_components/_attributes-list.scss'
+import './arbre_components/_columns.scss'
+import './arbre_components/_panels.scss'
+import './arbre_components/_status-tag.scss'
+import './arbre_components/_tables.scss'
+import './base/_variables.scss'
+import './base/_fonts.scss'
+import './base/_main_styles.scss'
+import './elements/_admin_form.scss'
+import './elements/_buttons.scss'
+import './elements/_containers.scss'
+import './elements/_filters.scss'
+import './elements/_forms.scss'
+import './elements/_index_table.scss'
+import './elements/_inputs.scss'
+import './elements/_links.scss'
+import './elements/_login_form.scss'
+import './elements/_navigation.scss'
+import './elements/_other.scss'
+import './elements/_pagination.scss'
+import './elements/_pills.scss'
+import './layouts/_default_admin_layout.scss'
+import './layouts/_login_screen.scss'
+import './sections/comments/_comments.scss'
+import './sections/flash/_flash.scss'
+import './sections/header/_header.scss'
+import './sections/header/_main_navigation.scss'
+import './sections/header/_utility_nav.scss'
+import './sections/pagination/_pagination.scss'
+import './sections/plugins/_datepicker.scss'
+import './sections/plugins/_dialog.scss'
+import './sections/sidebar/_filter_bar.scss'
+import './sections/title_bar/_action_items.scss'
+import './sections/title_bar/_breadcrumbs.scss'
+import './sections/title_bar/_scopes.scss'
+import './sections/title_bar/_tabs.scss'
+import './sections/title_bar/_title_bar.scss'
+import './sections/main_content/_batch_actions.scss'
+import './sections/main_content/_blank_slate_container.scss'
+import './sections/main_content/_forms.scss'
+import './sections/main_content/_forms_nested_resources.scss'
+import './sections/main_content/index/_index_as_blog.scss'
+import './sections/main_content/index/_index_as_grid.scss'
+import './sections/main_content/index/_index_as_table.scss'
+import './sections/footer/_footer.scss'
+import './sections/_reorderable_relations.scss'
+import './sections/_sortable.scss'
+//@import './sortable';
+//
+//// external packages
+//@import './clockpicker';
+//
+//@import './vendor_overrides';
+//
+//// Migrated from slickr
+//@import './slickr_elements';
+//@import './slickr_page_tree';
+//@import "./slickr_page_editing";
+//@import './slickr_split_display_with_image';
+//@import './slickr_loader';
+//@import './slickr_form_elements';
+//@import './slickr_file_inputs';
+//@import './slickr_custom_wrapper';
+//@import './slickr_media_gallery';
+//@import './slickr_image_cropper';
+//@import './slickr_image_editor';
+//@import './slickr_admin_dashboard';

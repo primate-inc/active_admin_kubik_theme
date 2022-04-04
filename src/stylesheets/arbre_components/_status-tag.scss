@@ -1,0 +1,12 @@
+@import '../elements/_pills.scss';
+.active_admin {
+  .status_tag {
+    @extend %standard-pill;
+    &.yes {
+      @extend %active-pill;
+    }
+    &.no {
+      @extend %inactive-pill;
+    }
+  }
+}

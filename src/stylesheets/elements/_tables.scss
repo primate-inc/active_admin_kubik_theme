@@ -1,0 +1,48 @@
+@import '../base/_fonts.scss';
+@import '../elements/_labels.scss';
+@mixin table_header_cell {
+  position: relative;
+  padding: var(--kubik-interface-space-300) var(--kubik-interface-space-100);
+  background: var(--kubik-interface-color-grey-100);
+  color: var(--kubik-interface-color-grey-500);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+%table_header_cell {
+  @include table_header_cell;
+}
+@mixin table_normal_cell {
+  padding: var(--kubik-interface-space-300) var(--kubik-interface-space-200);
+  background: var(--kubik-interface-color-white);
+  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+  color: var(--kubik-interface-color-grey-700);
+  font-weight: 600;
+}
+%table_normal_cell {
+  @include table_normal_cell;
+}
+%panel_table {
+  min-width: calc(50% - 1.3rem);
+  list-style-type: none;
+  padding: 0; margin: 0;
+  cursor: default;
+}
+%panel_table_row {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  padding: 1.25rem;
+  border: 1px solid #E6E6E6;
+  margin: -1px 0 0 -1px;
+  background: #ffffff;
+}
+%panel_table_header {
+  @extend %kubik-label;
+  text-align: left;
+}
+%panel_table_cell {
+  @extend %kubik-value;
+  height: auto;
+}

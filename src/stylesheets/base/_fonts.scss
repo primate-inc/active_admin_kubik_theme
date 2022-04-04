@@ -1,0 +1,92 @@
+///// TYPOGRAPHY /////
+.h1 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.h2 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.h3 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.h4 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.h5 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.h6 {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.para_style {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin para_style {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.para {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+.para_small_style {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 14px;
+  font-weight: 400;
+}
+@mixin para_small_style {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.para_small {
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+.subtitle {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  color: var(--kubik-interface-color-grey-700);
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid --var(--kubik-interface-color-grey-200);
+}
+.link_style {
+  font-size: 14px;
+  font-weight: 400;
+  color: --var(--kubik-interface-color-brand-400);
+}
+@mixin link_style {
+  font-size: 14px;
+  font-weight: 400;
+  color: --var(--kubik-interface-color-brand-400);
+}

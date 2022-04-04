@@ -1,0 +1,26 @@
+%slickr_tabs {
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  height: 3.75em;
+  padding: 0 0 0 var(--kubik-interface-space-400); margin: 0 0 1.75rem;
+  background: var(--kubik-interface-color-white);
+  list-style-type: none;
+}
+%slickr_tab {
+  display: block; padding: 1rem 0;
+  margin: 0 var(--kubik-interface-space-500) 0 0;
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  color: var(--kubik-interface-color-grey-400);
+  border-bottom: 2px solid var(--kubik-interface-color-white);
+  font-weight: 700;
+  text-transform: capitalize;
+  &:hover {
+    color: var(--kubik-interface-color-grey-700);
+  }
+}
+%slickr_active_tab {
+  color: var(--kubik-interface-color-grey-700);
+  cursor: pointer;
+  border-bottom: 2px solid var(--kubik-interface-color-brand-400);
+}
+

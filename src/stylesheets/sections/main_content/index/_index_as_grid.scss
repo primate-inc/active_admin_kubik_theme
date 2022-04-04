@@ -1,0 +1,31 @@
+@import '../../../elements/_labels.scss';
+@import '../../../elements/_links.scss';
+.active_admin .index_as_grid {
+  .index_grid {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    td {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      border: 1px solid var(--kubik-interface-color-grey-200);
+      background-color: var(--kubik-interface-color-white);
+      margin: -1px -1px 0 0;
+      a {
+        display: block;
+      }
+    }
+  }
+  .resource_selection_toggle_panel {
+    padding: .5rem;
+    label {
+      @extend %kubik-label;
+    }
+  }
+}

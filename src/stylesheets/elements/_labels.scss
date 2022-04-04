@@ -1,0 +1,19 @@
+%kubik-label {
+  color: var(--kubik-interface-color-grey-500);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-weight: 700;
+}
+%kubik-value {
+  color: var(--kubik-interface-color-black);
+  font-size: var(--kubik-interface-base-font-size);
+  font-weight: 600;
+}
+%kubik-legend {
+  color: var(--kubik-interface-color-black);
+  font-size: var(--kubik-interface-base-font-size);
+  font-weight: 700;
+}

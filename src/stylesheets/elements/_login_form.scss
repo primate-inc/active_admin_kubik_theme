@@ -1,0 +1,72 @@
+@import '../base/_fonts.scss';
+@import '../elements/_buttons.scss';
+@import '../elements/_inputs.scss';
+%login_form_basics {
+  fieldset {
+    padding: 0; margin: 0;
+    border: none;
+    &.actions {
+      margin-top: 1em;
+      ol {
+        display: flex;
+        .input_action {
+          margin-right: 1em;
+        }
+      }
+    }
+    ol {
+      list-style-type: none;
+      padding: 0; margin: 0;
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom:.5em;
+        &.error { flex-wrap: wrap; }
+        &.boolean label {}
+        &.input_action input { @include button; }
+        &.password, &.email, &.string, &.select {
+          & > label {
+            flex: 1 0 120px;
+            max-width: 150px;
+          }
+          label {
+            @include para_style;
+            margin-right: 1em;
+            abbr {
+              text-decoration: none;
+            }
+          }
+          & > input {
+            flex: 1 0 150px;
+            min-height: 30px;
+          }
+          input, select {
+            @extend %text_input_field;
+          }
+        }
+        textarea {
+          @extend %text_input_field;
+          height: 10em; width: 100%;
+        }
+        .field_with_errors {
+          &:nth-child(1) {
+            flex: 1 0 120px;
+            max-width: 150px; margin-right: 1em;
+          }
+          &:nth-child(2) {
+            flex: 1 0 150px;
+          }
+          label { color: var(--kubik-interface-color-alert); }
+          input { border-color: var(--kubik-interface-color-alert); width: 100%;}
+        }
+        .inline-errors {
+          flex-basis: 100%;
+          margin: 0;
+          color: var(--kubik-interface-color-alert);
+        }
+      }
+    }
+  }
+}
+

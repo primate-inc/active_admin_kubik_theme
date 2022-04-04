@@ -1,0 +1,127 @@
+@import '../base/fonts.scss';
+@mixin title_text {
+  color: var(--kubik-interface-color-grey-700);
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-base-font-size);
+  font-weight: 700;
+}
+%title_text {
+  @include title_text;
+}
+@mixin title_link {
+  color: var(--kubik-interface-color-brand-400);
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-base-font-size);
+  font-weight: 700;
+  &:before {
+    display: none;
+  }
+  &:hover {
+    text-decoration: underline;
+    background: inherit;
+  }
+}
+%title_link {
+  @include title_link;
+}
+@mixin table_link {
+  color: var(--kubik-interface-color-brand-400);
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 700;
+  &:before {
+    display: none;
+  }
+  &:hover {
+    text-decoration: underline;
+    background: inherit;
+  }
+}
+%table_link {
+  @include table_link;
+}
+@mixin general_link {
+  @include link_style;
+
+  position: relative;
+  color: var(--kubik-interface-color-brand-400);
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--kubik-interface-color-brand-400);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+  }
+  &:hover {
+    color: var(--kubik-interface-color-brand-400);
+    text-decoration: none;
+
+    &:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+%general_link {
+  @include general_link;
+}
+
+
+%nav_link {
+  box-sizing: border-box;
+  height: var(--kubik-interface-space-700);
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-base-font-size);
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+
+  transition: .2s;
+
+  &:hover {
+    color: var(--kubik-interface-color-white);
+    background: var(--kubik-interface-color-grey-700);
+  }
+}
+
+%nav_link_active {
+  @extend %nav_link;
+  color: var(--kubik-interface-color-brand-400);
+  background: var(--kubik-interface-color-grey-700);
+}
+
+%user_link {
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 700;
+  color: var(--kubik-interface-color-brand-400);
+}
+
+%sign_out_link {
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 400;
+  color: var(--kubik-interface-color-grey-400);
+}
+
+%tab_link {
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 400;
+  color: var(--kubik-interface-color-brand-500);
+
+  &.active {
+    color: var(--kubik-interface-color-white);
+  }
+}
