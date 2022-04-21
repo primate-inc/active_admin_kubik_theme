@@ -4,10 +4,23 @@
 @import '../../elements/_buttons.scss';
 @import '../../elements/_filters.scss';
 
+
+
+
+.logged_in #wrapper #active_admin_content.with_sidebar #sidebar{
+  width: 27rem;
+  height: 89.1vh;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  right: 0;
+}
+
 #filters_sidebar_section {
   @extend %brand_container;
   h3 { display: none; }
   background: var(--kubik-interface-color-grey-100);
+  justify-content: center
 }
 .clear_filters_btn {
   @extend %tab_link;
@@ -19,14 +32,13 @@
 
 
 }
-#search-status-_sidebar_section {
-  //display: none;
-}
-.logged_in.index #wrapper #active_admin_content.with_sidebar #sidebar.sidebar {
- //display: none;
-}
+// #search-status-_sidebar_section {
+//   display: none;
+// }
+// .logged_in.index #wrapper #active_admin_content.with_sidebar #sidebar.sidebar {
+//  display: none;
+// }
 .filter_form {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content:center;
