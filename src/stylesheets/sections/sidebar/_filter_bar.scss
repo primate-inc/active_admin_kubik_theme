@@ -7,13 +7,30 @@
 
 
 
-.logged_in #wrapper #active_admin_content.with_sidebar #sidebar{
-  width: 27rem;
-  height: 89.1vh;
+.index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar{
+  max-width: 27rem;
+  height: calc(100% - 60px);
   position: absolute;
   z-index: 1;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+
+  //&::before{
+  //  display: block;
+  //  position: absolute;
+  //  content: "";
+  //  width: 100%;
+  //  height: 100%;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background: rgba(51, 51, 51, 0.6);
+  //  z-index: 1;
+  //}
 }
 
 #filters_sidebar_section {

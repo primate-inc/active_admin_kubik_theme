@@ -14,6 +14,9 @@
         &:last-of-type {
           border-right: .1em solid var(--kubik-interface-color-grey-200);
         }
+        &:empty {
+          display: none;
+        }
         @media screen and (min-width: 75em) {
           &:last-of-type {
             border-right: 0;
