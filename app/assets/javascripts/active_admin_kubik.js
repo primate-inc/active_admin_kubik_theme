@@ -613,6 +613,15 @@ $(function() {
             if ($.inArray(index, errorIndex) !== -1) $(this).addClass('ui-tabs-error');
         });
     }
+    // Sidebar
+    if ($('.index.logged_in #sidebar .sidebar_section').length) {
+        $('#main_content .table_tools').append('<div class="filter_toggle">Show filters</div>');
+        $('#main_content .table_tools .filter_toggle').on('click', function(e) {
+            $('#active_admin_content #sidebar').toggleClass('expanded');
+            $('#active_admin_content #collection_selection').toggleClass('sidebar_expanded');
+            $('#active_admin_content #sidebar.expanded').length > 0 ? $(this).text('Hide filters') : $(this).text('Show filters');
+        });
+    }
 });
 
 },{}],"iEBDZ":[function(require,module,exports) {

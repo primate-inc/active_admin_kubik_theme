@@ -8,8 +8,8 @@
 
 
 .index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar{
-  width: 28rem;
-  height: calc(100% - 110px);
+  max-width: 0;
+  height: calc(100% - 230px);
   position: absolute;
   z-index: 1;
   overflow-y: auto;
@@ -17,31 +17,19 @@
   right: 0;
   display: flex;
   flex-direction: column-reverse;
-
-
-  @media (max-width:1200px) {
-    height: calc(100% - 175px);
+  transition: max-width .25s;
+  top: 180px;
+  &.expanded {
+    max-width: 27rem;
   }
-
-
-  //&::before{
-  //  display: block;
-  //  position: absolute;
-  //  content: "";
-  //  width: 100%;
-  //  height: 100%;
-  //  top: 0;
-  //  left: 0;
-  //  right: 0;
-  //  bottom: 0;
-  //  background: rgba(51, 51, 51, 0.6);
-  //  z-index: 1;
-  //}
+  @media screen and (min-width: 75em) {
+    top: 120px;
+    height: calc(100% - 170px);
+  }
 }
 
 #filters_sidebar_section {
   @extend %brand_container;
-  h3 { display: none; }
   background: var(--kubik-interface-color-grey-100);
   justify-content: center
 }
@@ -52,11 +40,9 @@
   &:hover {
     color: white;
   }
-
-
 }
 
-#search_status_sidebar_section{
+#search_status_sidebar_section {
   background-color:var(--kubik-interface-color-brand-400);
   color:var(--kubik-interface-color-white);
 
@@ -72,24 +58,20 @@
     align-self: flex-start;
     margin-bottom: 1em;
 
-    b{
+    b {
       width: 100%;
       height: 5em;
-      padding: .4em;
+      margin-left: .5rem;
+      padding: .25rem .5rem;
       border-radius: 400px;
       font-size: 12px;
       font-weight: 380;
       background-color: var(--kubik-interface-color-white);
       color: var(--kubik-interface-color-brand-400);
+      a { color: inherit; }
     }
   }
 }
-// #search-status-_sidebar_section {
-//   display: none;
-// }
-// .logged_in.index #wrapper #active_admin_content.with_sidebar #sidebar.sidebar {
-//  display: none;
-// }
 .filter_form {
   flex-direction: row;
   flex-wrap: wrap;
@@ -118,32 +100,29 @@
   }
 
   .input {
-    display: block;
+    display: flex;
     padding: 0.5em 0;
     align-items: center;
     flex: 1 1 calc(50% - 12rem);
     flex-wrap: wrap;
-    width: 35rem;
 
     select + input {
       margin-bottom: 0.5em;
     }
 
     label {
-      flex: 0 0 7em;
       @extend %filter_label;
+      flex: 0 0 100%;
+      display: block;
       margin-bottom: 0.5em;
       white-space: pre-wrap;
       color: var(--kubik-interface-color-brand-400);
       font-weight: 700;
-      width: 500px;
-      display: inline-block;
     }
     & > select {
       @extend %filter_dropdown;
-      flex: 1 1 49%;
-      margin-right: 0.3em;
-      width: 14em;
+      flex: 1 1 0;
+      margin-right: 1px;
       margin-bottom: 0.5em;
       cursor: pointer;
       background: var(--kubik-interface-color-white);
@@ -151,26 +130,22 @@
       height: 3em;
     }
 
-    #q_featured{
-      width: 28.5em;
-    }
 
 
     input {
-      flex: 1 1 50%;
       @extend %filter_field;
-      width: 14em;
+      flex: 1 1 0;
       height: 3em;
 
 
       &.datepicker {
-        margin: 0;
-        border: none;
         @extend %filter_dropdown;
+        height: 3em;
+        margin-right: 1px;
+        border: none;
         cursor: pointer;
         background: var(--kubik-interface-color-white);
         color: var(--kubik-interface-color--black);
-        height: 3em;
 
         &:focus {
           border-color: white;

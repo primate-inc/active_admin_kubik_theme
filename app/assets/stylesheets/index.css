@@ -2159,6 +2159,10 @@ a {
   color: var(--kubik-interface-color-brand-400);
 }
 
+.active_admin .without_sidebar #main_content_wrapper .tabs .attributes_table {
+  margin: 0 1rem;
+}
+
 .active_admin .without_sidebar #main_content_wrapper .attributes_table {
   margin: 0 1.75rem;
 }
@@ -4400,8 +4404,8 @@ a {
 }
 
 .index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar {
-  max-width: 27rem;
-  height: calc(100% - 60px);
+  max-width: 0;
+  height: calc(100% - 230px);
   position: absolute;
   z-index: 1;
   overflow-y: auto;
@@ -4409,14 +4413,22 @@ a {
   right: 0;
   display: flex;
   flex-direction: column-reverse;
+  transition: max-width 0.25s;
+  top: 180px;
+}
+.index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar.expanded {
+  max-width: 27rem;
+}
+@media screen and (min-width: 75em) {
+  .index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar {
+    top: 120px;
+    height: calc(100% - 170px);
+  }
 }
 
 #filters_sidebar_section {
   background: var(--kubik-interface-color-grey-100);
   justify-content: center;
-}
-#filters_sidebar_section h3 {
-  display: none;
 }
 
 .clear_filters_btn {
@@ -4425,6 +4437,35 @@ a {
 }
 .clear_filters_btn:hover {
   color: white;
+}
+
+#search_status_sidebar_section {
+  background-color: var(--kubik-interface-color-brand-400);
+  color: var(--kubik-interface-color-white);
+  font-weight: 400;
+  font-size: 14px;
+}
+#search_status_sidebar_section ul {
+  padding-left: 0;
+}
+#search_status_sidebar_section li {
+  list-style: none;
+  align-self: flex-start;
+  margin-bottom: 1em;
+}
+#search_status_sidebar_section li b {
+  width: 100%;
+  height: 5em;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 400px;
+  font-size: 12px;
+  font-weight: 380;
+  background-color: var(--kubik-interface-color-white);
+  color: var(--kubik-interface-color-brand-400);
+}
+#search_status_sidebar_section li b a {
+  color: inherit;
 }
 
 .filter_form {
@@ -4458,51 +4499,43 @@ a {
   background: image-url("svgs/tick.svg") no-repeat;
 }
 .filter_form .input {
-  display: block;
+  display: flex;
   padding: 0.5em 0;
   align-items: center;
   flex: 1 1 calc(50% - 12rem);
   flex-wrap: wrap;
-  min-width: 25rem;
-  max-width: 35rem;
 }
 .filter_form .input select + input {
   margin-bottom: 0.5em;
 }
 .filter_form .input label {
-  flex: 0 0 7em;
+  flex: 0 0 100%;
+  display: block;
   margin-bottom: 0.5em;
   white-space: pre-wrap;
   color: var(--kubik-interface-color-brand-400);
   font-weight: 700;
-  width: 500px;
-  display: inline-block;
 }
 .filter_form .input > select {
-  flex: 1 1 49%;
-  margin-right: 0.3em;
-  width: 14em;
+  flex: 1 1 0;
+  margin-right: 1px;
   margin-bottom: 0.5em;
   cursor: pointer;
   background: var(--kubik-interface-color-white);
   color: var(--kubik-interface-color--black);
   height: 3em;
 }
-.filter_form .input #q_featured {
-  width: 28.5em;
-}
 .filter_form .input input {
-  flex: 1 1 50%;
-  width: 14em;
+  flex: 1 1 0;
   height: 3em;
 }
 .filter_form .input input.datepicker {
-  margin: 0;
+  height: 3em;
+  margin-right: 1px;
   border: none;
   cursor: pointer;
   background: var(--kubik-interface-color-white);
   color: var(--kubik-interface-color--black);
-  height: 3em;
 }
 .filter_form .input input.datepicker:focus {
   border-color: white;
@@ -4910,17 +4943,13 @@ a {
   border-bottom: 2px solid var(--kubik-interface-color-brand-400);
 }
 
-#active_admin_content .table_tools .scopes {
-  border-top: 1px solid var(--kubik-interface-color-grey-200);
-  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
-}
 #active_admin_content .table_tools .scopes .table_tools_segmented_control {
   margin: 0;
   list-style: none;
 }
 @media screen and (min-width: 75em) {
   #active_admin_content .table_tools .scopes {
-    border-top: 0;
+    border-top: 1px solid var(--kubik-interface-color-grey-200);
   }
 }
 .button, .button.small {
@@ -5068,11 +5097,7 @@ a {
   margin-bottom: 0;
 }
 #active_admin_content .tab-content {
-  padding: 0.9rem 0;
-}
-#active_admin_content .tab-content .panel, #active_admin_content .tab-content .inputs {
-  margin: 0;
-  padding: 0;
+  margin: 0.9rem 0;
 }
 .active_admin #title_bar {
   display: flex;
@@ -5095,11 +5120,13 @@ a {
   display: flex;
   justify-content: space-evenly;
   height: 3.75em;
+  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
 }
 @media screen and (min-width: 75em) {
   .active_admin #title_bar #titlebar_right {
     flex: 0 0 auto;
     justify-content: flex-end;
+    border: 0;
   }
 }
 
@@ -5393,6 +5420,44 @@ a {
 }
 .active_admin .blank_slate_container span a {
   color: var(--kubik-interface-color-brand-400);
+}
+#collection_selection {
+  flex: 1;
+}
+#collection_selection.sidebar_expanded {
+  position: relative;
+}
+#collection_selection.sidebar_expanded::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: calc(100% - 60px);
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(51, 51, 51, 0.6);
+  border-top: 1px solid var(--kubik-interface-color-grey-200);
+  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+  z-index: 1;
+}
+
+#collection_selection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#main_content {
+  display: flex;
+}
+#main_content form, #main_content .tabs {
+  flex: 1;
+}
+
+#main_content_wrapper {
+  display: flex;
 }
 .active_admin .formtastic fieldset.actions input[type=submit], .button, .button.small {
   box-sizing: border-box;
@@ -5707,6 +5772,9 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
 .active_admin .formtastic legend.label {
   border: 0;
 }
+.active_admin .formtastic fieldset {
+  margin: 0.9rem 1rem;
+}
 .active_admin .formtastic fieldset.actions {
   background-color: transparent;
   border: 0;
@@ -5776,7 +5844,7 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
   border-color: var(--kubik-interface-color-alert);
 }
 .active_admin .formtastic .input .label {
-  display: inline-block;
+  display: block;
   margin-bottom: 0.25rem;
 }
 .active_admin .formtastic .input.datepicker input {
@@ -6885,6 +6953,71 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
     height: auto;
     padding-right: var(--kubik-interface-space-400);
   }
+}
+.table_tools .filter_toggle {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 var(--kubik-interface-space-400);
+  height: 100%;
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 700;
+  color: var(--kubik-interface-color-brand-400);
+  background: var(--kubik-interface-color-white);
+  text-decoration: none;
+  border-left: 0.1em solid var(--kubik-interface-color-grey-200);
+  cursor: pointer;
+  white-space: pre;
+  transition: 0.2s;
+}
+.table_tools .filter_toggle:hover {
+  background: var(--kubik-interface-color-grey-100);
+}
+
+.button, .button.small {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--kubik-interface-base-font-family);
+  font-size: var(--kubik-interface-font-size-small);
+  font-weight: 700;
+  color: var(--kubik-interface-color-white);
+  background: var(--kubik-interface-color-brand-400);
+  text-decoration: none;
+  line-height: 1;
+  border: 2px solid var(--kubik-interface-color-brand-400);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+  color: var(--kubik-interface-color-white);
+  background: var(--kubik-interface-color-brand-500);
+  border-color: var(--kubik-interface-color-brand-500);
+}
+
+.button.small {
+  padding: var(--kubik-interface-space-100) var(--kubik-interface-space-200);
+  height: var(--kubik-interface-space-750);
+  font-size: var(--kubik-interface-font-size-small);
+}
+
+.table_tools {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  min-height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+  justify-content: space-between;
+  align-items: center;
+}
+.table_tools .filter_toggle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  border: 0;
 }
 .h1 {
   color: var(--kubik-interface-color-grey-700);

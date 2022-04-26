@@ -18,6 +18,7 @@
   }
   fieldset {
     @extend %fieldset;
+    margin: 0.9rem 1rem;
     &.actions {
       background-color: transparent;
       border: 0;
@@ -109,7 +110,7 @@
     }
     .label {
       @extend %label;
-      display: inline-block;
+      display: block;
       margin-bottom: .25rem;
     }
     &.boolean {

@@ -75,6 +75,11 @@
     }
   }
 }
+.active_admin .without_sidebar #main_content_wrapper .tabs {
+  .attributes_table {
+    margin: 0 1rem;
+  }
+}
 .active_admin .without_sidebar #main_content_wrapper {
   .attributes_table {
     margin: 0 1.75rem;
