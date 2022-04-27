@@ -26,6 +26,7 @@
 }
 #main_content {
   display: flex;
+  flex-direction: column;
   form, .tabs { flex: 1; }
 }
 #main_content_wrapper {
