@@ -5827,6 +5827,17 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
   flex-direction: column;
   margin-right: 1px;
 }
+.active_admin .formtastic .fragments .fragments-group .fragment select {
+  border-radius: 0;
+}
+.active_admin .formtastic .fragments .fragments-group .fragment:first-of-type select {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+.active_admin .formtastic .fragments .fragments-group .fragment:last-of-type select {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
 .active_admin .formtastic .fragments .label {
   padding: 0;
 }
