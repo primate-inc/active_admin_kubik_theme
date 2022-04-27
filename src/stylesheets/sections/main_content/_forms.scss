@@ -86,6 +86,15 @@
         }
         select {
           @extend %select_field;
+          border-radius: 0;
+        }
+        &:first-of-type select {
+          border-top-left-radius: .2rem;
+          border-bottom-left-radius: .2rem;
+        }
+        &:last-of-type select {
+          border-top-right-radius: .2rem;
+          border-bottom-right-radius: .2rem;
         }
       }
     }
