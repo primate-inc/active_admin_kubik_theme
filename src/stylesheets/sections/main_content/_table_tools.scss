@@ -6,7 +6,7 @@
   min-height: 60px;
   background-color: #fff;
   border-bottom: 1px solid var(--kubik-interface-color-grey-200);
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   .filter_toggle {
     @extend %action_button;
