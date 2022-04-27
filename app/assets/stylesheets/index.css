@@ -5451,6 +5451,7 @@ a {
 
 #main_content {
   display: flex;
+  flex-direction: column;
 }
 #main_content form, #main_content .tabs {
   flex: 1;
