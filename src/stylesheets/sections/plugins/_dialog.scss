@@ -19,7 +19,7 @@
       color: var(--kubik-interface-color-black);
       font-family: var(--kubik-interface-base-font-family);
       font-size: var(--kubik-interface-base-font-size);
-      font-weight: 700;
+      font-weight: 500;
       border: 1px solid var(--kubik-interface-color-grey-200);
       border-bottom: 0;
 
@@ -29,13 +29,15 @@
         align-items: center;
         overflow: hidden;
         cursor: pointer;
-        color: var(--kubik-interface-color-grey-200);
+        color: transparent;
         border-width: 0;
         transition: .2s;
+        background-color: var(--kubik-interface-color-white);
 
         &:before {
           content: ' ';
           position: absolute;
+          filter: brightness(0.5);
           background: image-url('svgs/cross.svg') no-repeat;
           display: inline-block; width: 20px; height: 20px;
         }

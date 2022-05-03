@@ -9,13 +9,13 @@
   th {
     @extend %table_header_cell;
     &:first-of-type {
-      padding-left: var(--kubik-interface-space-500);
+      padding-left: var(--kubik-interface-space-400);
     }
   }
   tr td {
     @extend %table_normal_cell;
     &:first-of-type {
-      padding-left: var(--kubik-interface-space-500);
+      padding-left: var(--kubik-interface-space-400);
     }
   }
   &--zebra {
