@@ -567,26 +567,7 @@ var _indexAsTableScss = require("./sections/main_content/index/_index_as_table.s
 var _tableToolsScss = require("./sections/main_content/_table_tools.scss");
 var _footerScss = require("./sections/footer/_footer.scss");
 var _reorderableRelationsScss = require("./sections/_reorderable_relations.scss");
-var _sortableScss = require("./sections/_sortable.scss"); //@import './sortable';
- //
- //// external packages
- //@import './clockpicker';
- //
- //@import './vendor_overrides';
- //
- //// Migrated from slickr
- //@import './slickr_elements';
- //@import './slickr_page_tree';
- //@import "./slickr_page_editing";
- //@import './slickr_split_display_with_image';
- //@import './slickr_loader';
- //@import './slickr_form_elements';
- //@import './slickr_file_inputs';
- //@import './slickr_custom_wrapper';
- //@import './slickr_media_gallery';
- //@import './slickr_image_cropper';
- //@import './slickr_image_editor';
- //@import './slickr_admin_dashboard';
+var _sortableScss = require("./sections/_sortable.scss");
 
 },{"./base/_variables.scss":"he1mO","./base/_fonts.scss":"iMrMg","./base/_main_styles.scss":"g7A5M","./elements/_admin_form.scss":"8tPA6","./elements/_buttons.scss":"iCyyS","./elements/_containers.scss":"i6O1s","./elements/_filters.scss":"bya8L","./elements/_forms.scss":"bfDYk","./elements/_index_table.scss":"2M5Ad","./elements/_inputs.scss":"5XZQ9","./elements/_links.scss":"iOj7v","./elements/_login_form.scss":"6d2ew","./elements/_navigation.scss":"eypfj","./elements/_other.scss":"gva0u","./elements/_pagination.scss":"kqlZM","./sections/_reorderable_relations.scss":"lNW1P","./sections/_sortable.scss":"jauWM","./arbre_components/_attributes-list.scss":"iMCx8","./arbre_components/_columns.scss":"kvPnF","./arbre_components/_panels.scss":"kEAyr","./arbre_components/_status-tag.scss":"jtFdC","./arbre_components/_tables.scss":"gQOZN","./elements/_pills.scss":"4YKVl","./layouts/_default_admin_layout.scss":"7XFCc","./layouts/_login_screen.scss":"4udJ2","./sections/comments/_comments.scss":"iSjIl","./sections/flash/_flash.scss":"eHGL4","./sections/header/_header.scss":"aWCYn","./sections/header/_main_navigation.scss":"eP5zr","./sections/header/_utility_nav.scss":"dA9b7","./sections/pagination/_pagination.scss":"jYfJA","./sections/plugins/_datepicker.scss":"jxoQL","./sections/plugins/_dialog.scss":"f0ZqD","./sections/sidebar/_filter_bar.scss":"7uh54","./sections/title_bar/_action_items.scss":"ffk4k","./sections/title_bar/_breadcrumbs.scss":"8vbI0","./sections/title_bar/_scopes.scss":"lxZGL","./sections/title_bar/_tabs.scss":"4sxUP","./sections/title_bar/_title_bar.scss":"kZzPv","./sections/main_content/_batch_actions.scss":"eXsx6","./sections/main_content/_blank_slate_container.scss":"6jWc9","./sections/main_content/_collection.scss":"7eiPC","./sections/main_content/_forms.scss":"kriJY","./sections/main_content/_forms_nested_resources.scss":"azitS","./sections/main_content/index/_index_as_blog.scss":"03IMC","./sections/main_content/index/_index_as_grid.scss":"cRF9B","./sections/main_content/index/_index_as_table.scss":"9Xv8T","./sections/main_content/_table_tools.scss":"eVLxm","./sections/footer/_footer.scss":"89Q8M"}],"he1mO":[function() {},{}],"iMrMg":[function() {},{}],"g7A5M":[function() {},{}],"8tPA6":[function() {},{}],"iCyyS":[function() {},{}],"i6O1s":[function() {},{}],"bya8L":[function() {},{}],"bfDYk":[function() {},{}],"2M5Ad":[function() {},{}],"5XZQ9":[function() {},{}],"iOj7v":[function() {},{}],"6d2ew":[function() {},{}],"eypfj":[function() {},{}],"gva0u":[function() {},{}],"kqlZM":[function() {},{}],"lNW1P":[function() {},{}],"jauWM":[function() {},{}],"iMCx8":[function() {},{}],"kvPnF":[function() {},{}],"kEAyr":[function() {},{}],"jtFdC":[function() {},{}],"gQOZN":[function() {},{}],"4YKVl":[function() {},{}],"7XFCc":[function() {},{}],"4udJ2":[function() {},{}],"iSjIl":[function() {},{}],"eHGL4":[function() {},{}],"aWCYn":[function() {},{}],"eP5zr":[function() {},{}],"dA9b7":[function() {},{}],"jYfJA":[function() {},{}],"jxoQL":[function() {},{}],"f0ZqD":[function() {},{}],"7uh54":[function() {},{}],"ffk4k":[function() {},{}],"8vbI0":[function() {},{}],"lxZGL":[function() {},{}],"4sxUP":[function() {},{}],"kZzPv":[function() {},{}],"eXsx6":[function() {},{}],"6jWc9":[function() {},{}],"7eiPC":[function() {},{}],"kriJY":[function() {},{}],"azitS":[function() {},{}],"03IMC":[function() {},{}],"cRF9B":[function() {},{}],"9Xv8T":[function() {},{}],"eVLxm":[function() {},{}],"89Q8M":[function() {},{}]},["15fRr","afSyb"], "afSyb", "parcelRequire2b4c")
 

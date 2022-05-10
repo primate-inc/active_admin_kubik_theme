@@ -1767,7 +1767,7 @@ a {
 }
 .active_admin .panel:not(.comments) > h3 {
   margin-top: 0;
-  padding: 0 2rem;
+  padding: 0 var(--kubik-interface-space-400);
   font-size: var(--kubik-interface-base-font-size);
   font-weight: 700;
 }
@@ -2109,10 +2109,10 @@ a {
   width: 100%;
 }
 .active_admin .kubik_table th:first-of-type, .active_admin #main_content_wrapper table th:first-of-type {
-  padding-left: var(--kubik-interface-space-500);
+  padding-left: var(--kubik-interface-space-400);
 }
 .active_admin .kubik_table tr td:first-of-type, .active_admin #main_content_wrapper table tr td:first-of-type {
-  padding-left: var(--kubik-interface-space-500);
+  padding-left: var(--kubik-interface-space-400);
 }
 .active_admin .kubik_table--zebra tr:nth-child(even) td, .active_admin #main_content_wrapper table--zebra tr:nth-child(even) td {
   background-color: var(--kubik-interface-color-brand-050);
@@ -3990,8 +3990,15 @@ a {
   margin-top: 3px;
   border-radius: 3px;
   border: 1px solid var(--kubik-interface-color-grey-200);
-  background-color: white;
+  background-color: var(--kubik-interface-color-grey-200);
   box-shadow: 0.25em 0.25em 0.4em 0 rgba(0, 0, 0, 0.3);
+}
+.ui-datepicker-month, .ui-datepicker-year {
+  color: var(--kubik-interface-color-black);
+}
+.ui-datepicker-header a {
+  background: var(--kubik-interface-color-grey-200);
+  border: none;
 }
 .ui-datepicker table {
   width: 100%;
@@ -4004,11 +4011,10 @@ a {
   text-align: center;
   cursor: pointer;
   color: var(--kubik-interface-color-grey-200);
-  border: 1px solid var(--kubik-interface-color-grey-200);
 }
 .ui-datepicker thead td, .ui-datepicker thead th {
-  color: var(--kubik-interface-color-brand-500);
-  font-size: 12px;
+  color: var(--kubik-interface-color-black);
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -4016,8 +4022,9 @@ a {
   color: #666;
 }
 .ui-datepicker tbody td:hover {
-  border-color: var(--kubik-interface-color-brand-500);
-  background: var(--kubik-interface-color-brand-500);
+  border-color: var(--kubik-interface-color-brand-400);
+  background: var(--kubik-interface-color-brand-400);
+  font-weight: 700;
 }
 .ui-datepicker tbody td:hover a {
   color: #fff;
@@ -4081,6 +4088,7 @@ a {
   background-size: cover;
   background-position-y: 0px;
   transform: rotate(90deg);
+  filter: brightness(0.1);
   background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHRpdGxlPkFydGJvYXJkIDM8L3RpdGxlPjxwb2x5Z29uIGZpbGw9JyNmZmZmZmYnIHBvaW50cz0iOS45OCAxMy4yNiA0LjkyIDguMiA2LjMzIDYuNzkgOS45OCAxMC40MyAxMy42NiA2Ljc0IDE1LjA4IDguMTYgOS45OCAxMy4yNiIvPjwvc3ZnPg==");
 }
 .ui-datepicker-next {
@@ -4094,6 +4102,8 @@ a {
   background-size: cover;
   background-position-y: 0px;
   transform: rotate(-90deg);
+  color: var(--kubik-interface-color-black);
+  filter: brightness(0.1);
   background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHRpdGxlPkFydGJvYXJkIDM8L3RpdGxlPjxwb2x5Z29uIGZpbGw9JyNmZmZmZmYnIHBvaW50cz0iOS45OCAxMy4yNiA0LjkyIDguMiA2LjMzIDYuNzkgOS45OCAxMC40MyAxMy42NiA2Ljc0IDE1LjA4IDguMTYgOS45OCAxMy4yNiIvPjwvc3ZnPg==");
 }
 .ui-datepicker .current-date {
@@ -4157,7 +4167,7 @@ a {
   color: var(--kubik-interface-color-black);
   font-family: var(--kubik-interface-base-font-family);
   font-size: var(--kubik-interface-base-font-size);
-  font-weight: 700;
+  font-weight: 500;
   border: 1px solid var(--kubik-interface-color-grey-200);
   border-bottom: 0;
 }
@@ -4173,13 +4183,15 @@ a {
   align-items: center;
   overflow: hidden;
   cursor: pointer;
-  color: var(--kubik-interface-color-grey-200);
+  color: transparent;
   border-width: 0;
   transition: 0.2s;
+  background-color: var(--kubik-interface-color-white);
 }
 .active_admin .active_admin_dialog .ui-dialog-titlebar button:before {
   content: " ";
   position: absolute;
+  filter: brightness(0.5);
   background: image-url("svgs/cross.svg") no-repeat;
   display: inline-block;
   width: 20px;
@@ -7020,7 +7032,7 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
   min-height: 60px;
   background-color: #fff;
   border-bottom: 1px solid var(--kubik-interface-color-grey-200);
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .table_tools .filter_toggle {
