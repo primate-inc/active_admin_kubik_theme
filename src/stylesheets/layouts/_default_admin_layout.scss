@@ -55,7 +55,10 @@
           h3 { padding: 0; }
           .sidebar_section {
             flex: 1;
-            padding: 2rem 1.25rem;
+            padding: 2rem 1rem;
+            @media screen and (min-width: 75em) {
+              padding: 2rem 1rem;
+            }
           }
           @media screen and (min-width: 75em) {
             width: clamp(23rem, 25vw, 450px);

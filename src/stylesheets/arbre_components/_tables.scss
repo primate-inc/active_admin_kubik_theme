@@ -9,13 +9,13 @@
   th {
     @extend %table_header_cell;
     &:first-of-type {
-      padding-left: var(--kubik-interface-space-400);
+      padding-left: 1rem;
     }
   }
   tr td {
     @extend %table_normal_cell;
     &:first-of-type {
-      padding-left: var(--kubik-interface-space-400);
+      padding-left: 1rem;
     }
   }
   &--zebra {
@@ -30,7 +30,10 @@
     display: flex;
     padding: 0 ;
     width: auto;
-    margin: 0 0 0 1.75rem;
+    margin: 0 1rem;
+    @media screen and (min-width: 75em) {
+      margin: 0 0 0 1rem;
+    }
     table {
       @extend %panel_table;
       width: 100%;
@@ -82,11 +85,12 @@
 }
 .active_admin .without_sidebar #main_content_wrapper {
   .attributes_table {
-    margin: 0 1.75rem;
+    margin: 0 1rem;
   }
 }
 #sidebar {
   .attributes_table {
     margin-left: 0;
+    margin-right: 0;
   }
 }

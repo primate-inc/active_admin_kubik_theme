@@ -1772,7 +1772,8 @@ a {
   font-weight: 700;
 }
 .active_admin.show .panel:not(.comments) > h3 {
-  padding-left: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .active_admin .status_tag {
   padding: 0.25rem 0.5rem;
@@ -2109,10 +2110,10 @@ a {
   width: 100%;
 }
 .active_admin .kubik_table th:first-of-type, .active_admin #main_content_wrapper table th:first-of-type {
-  padding-left: var(--kubik-interface-space-400);
+  padding-left: 1rem;
 }
 .active_admin .kubik_table tr td:first-of-type, .active_admin #main_content_wrapper table tr td:first-of-type {
-  padding-left: var(--kubik-interface-space-400);
+  padding-left: 1rem;
 }
 .active_admin .kubik_table--zebra tr:nth-child(even) td, .active_admin #main_content_wrapper table--zebra tr:nth-child(even) td {
   background-color: var(--kubik-interface-color-brand-050);
@@ -2122,7 +2123,12 @@ a {
   display: flex;
   padding: 0;
   width: auto;
-  margin: 0 0 0 1.75rem;
+  margin: 0 1rem;
+}
+@media screen and (min-width: 75em) {
+  .active_admin .attributes_table, .active_admin #main_content_wrapper .attributes_table {
+    margin: 0 0 0 1rem;
+  }
 }
 .active_admin .attributes_table table, .active_admin #main_content_wrapper .attributes_table table {
   width: 100%;
@@ -2164,11 +2170,12 @@ a {
 }
 
 .active_admin .without_sidebar #main_content_wrapper .attributes_table {
-  margin: 0 1.75rem;
+  margin: 0 1rem;
 }
 
 #sidebar .attributes_table {
   margin-left: 0;
+  margin-right: 0;
 }
 
 .h1 {
@@ -2414,7 +2421,12 @@ a {
 }
 .logged_in #wrapper #active_admin_content.with_sidebar #sidebar .sidebar_section {
   flex: 1;
-  padding: 2rem 1.25rem;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 75em) {
+  .logged_in #wrapper #active_admin_content.with_sidebar #sidebar .sidebar_section {
+    padding: 2rem 1rem;
+  }
 }
 @media screen and (min-width: 75em) {
   .logged_in #wrapper #active_admin_content.with_sidebar #sidebar {
@@ -6134,7 +6146,7 @@ body:not(:-moz-handler-blocked) .active_admin .formtastic fieldset, .active_admi
 }
 
 .active_admin .formtastic .has_many_container {
-  padding: 1rem 1.25rem 0.9rem;
+  padding: 1rem 1rem 0.9rem;
   background: transparent;
   display: flex;
   flex-wrap: wrap;

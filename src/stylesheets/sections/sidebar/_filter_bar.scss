@@ -4,10 +4,7 @@
 @import '../../elements/_buttons.scss';
 @import '../../elements/_filters.scss';
 
-
-
-
-.index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar{
+.index.logged_in #wrapper #active_admin_content.with_sidebar #sidebar {
   max-width: 0;
   height: calc(100% - 230px);
   position: absolute;
@@ -33,6 +30,7 @@
   background: var(--kubik-interface-color-grey-100);
   justify-content: center
 }
+
 .clear_filters_btn {
   @extend %tab_link;
   text-decoration: none;
