@@ -4,6 +4,11 @@ PATH
     active_admin_kubik (0.1.0)
       chosen-rails (~> 1.9.0)
 
+PATH
+  remote: /kubik_styles_base
+  specs:
+    kubik_styles_base (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -281,6 +286,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   jbuilder (~> 2.7)
+  kubik_styles_base!
   listen (~> 3.3)
   pg
   puma (~> 5.0)

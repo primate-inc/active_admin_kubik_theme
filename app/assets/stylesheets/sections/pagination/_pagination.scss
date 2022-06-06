@@ -1,0 +1,8 @@
+.logged_in {
+  #wrapper {
+    #index_footer {
+      @extend %pagination
+    }
+  }
+}
+

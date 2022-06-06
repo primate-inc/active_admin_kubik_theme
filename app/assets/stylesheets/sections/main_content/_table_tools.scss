@@ -1,0 +1,18 @@
+.table_tools {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  min-height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+  justify-content: flex-start;
+  align-items: center;
+  .filter_toggle {
+    @extend %action_button;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    border: 0;
+  }
+}
