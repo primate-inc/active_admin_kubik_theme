@@ -35,7 +35,7 @@
   }
 
   .flash_alert {
-    @extend %container_alert;
+    @extend %kubik-container--alert;
   }
   #active_admin_content {
     background-color: white;
@@ -45,7 +45,7 @@
   #error_explanation {
     background-color: var(--kubik-interface-color-alert);
     h2 {
-      @extend %h4;
+      @extend %kubik-typography-h4;
       color: var(--kubik-interface-color-white);
     }
     ul {
@@ -86,10 +86,11 @@
         }
       }
       .boolean label {
-        @extend %checkbox-white;
+        @extend %kubik-form-input-checkbox--white;
         padding-left: 0;
       }
     }
+
     a {
       display: block;
       margin: 1.25rem;

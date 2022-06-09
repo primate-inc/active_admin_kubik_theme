@@ -1,6 +1,6 @@
 %pagination {
   .pagination_information, .download_links {
-    @extend %para--small;
+    @extend %kubik-typography-para--small;
     display: inline-block;
     a { @extend %general_link; }
   }
@@ -17,7 +17,7 @@
     }
   }
   .pagination {
-    @extend %para--small;
+    @extend %kubik-typography-para--small;
     margin-bottom: var(--kubik-interface-space-100); padding-left: var(--kubik-interface-space-350);
     .page {
       color: var(--kubik-interface-color-brand-400);

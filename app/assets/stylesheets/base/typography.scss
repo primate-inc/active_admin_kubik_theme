@@ -1,16 +1,16 @@
-.h1 { @extend %h1; }
-.h2 { @extend %h2; }
-.h3 { @extend %h3; }
-.h4 { @extend %h4; }
-.h5 { @extend %h5; }
-.h6 { @extend %h6; }
+.h1 { @extend %kubik-typography-h1; }
+.h2 { @extend %kubik-typography-h2; }
+.h3 { @extend %kubik-typography-h3; }
+.h4 { @extend %kubik-typography-h4; }
+.h5 { @extend %kubik-typography-h5; }
+.h6 { @extend %kubik-typography-h6; }
 
 .para {
-  @extend %para;
+  @extend %kubik-typography-para;
 
-  &--small { @extend %para--small; }
+  &--small { @extend %kubik-typography-para--small; }
 }
 
-.subtitle { @extend %subtitle; }
+.subtitle { @extend %kubik-typography-subtitle; }
 
-.link { @extend %link; }
+.link { @extend %kubik-typography-link; }

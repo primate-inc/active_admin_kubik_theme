@@ -33,18 +33,18 @@
         }
       }
       .button.has_many_remove {
-        @extend %remove-nested-button;
+        @extend %kubik-button-nested-remove;
       }
       .has_many_delete {
         label {
-          @extend %checkbox-white;
+          @extend %kubik-form-input-checkbox--white;
           padding: 0;
           margin-bottom: 0;
         }
       }
     }
     .button.has_many_add {
-      @extend %button-secondary;
+      @extend %kubik-button--secondary;
       width: 100%;
       text-align: center;
       order: 999;

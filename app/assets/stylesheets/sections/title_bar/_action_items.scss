@@ -6,7 +6,7 @@
 
       span.action_item,
       #title_bar .action_items div.action_item {
-        @extend %action_button;
+        @extend %kubik-action-button;
         display: flex;
         align-items: center;
         svg { fill: var(--kubik-interface-color-brand-400);}
@@ -69,7 +69,7 @@
     position: relative; height: 100%;
 
     a {
-      @extend %action_button;
+      @extend %kubik-action-button;
       display: flex; align-items: center;
     }
     .action_item_dropdown {

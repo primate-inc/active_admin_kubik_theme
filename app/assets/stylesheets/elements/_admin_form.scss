@@ -36,7 +36,7 @@
 //             overflow: hidden;
 //             z-index: -1;
 //             & + label {
-//               @extend %button;
+//               @extend %kubik-button;
 //               flex: 1 0 200px;
 //               display: inline-block;
 //               width: 45%;
@@ -84,7 +84,7 @@
 //
 //             &:before {
 //               content: 'Upload';
-//               @extend %button;
+//               @extend %kubik-button;
 //             }
 //           }
 //           select {

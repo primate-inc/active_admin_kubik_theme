@@ -52,7 +52,7 @@
       color: var(--kubik-interface-color-black);
       border: 1px solid var(--kubik-interface-color-grey-200);
       button {
-        @extend %button;
+        @extend %kubik-button;
       }
     }
     &-buttonset {

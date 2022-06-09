@@ -20,7 +20,7 @@
 }
 
 #filters_sidebar_section {
-  @extend %brand_container;
+  @extend %kubik-container--brand;
   background: var(--kubik-interface-color-grey-100);
   justify-content: center
 }
@@ -77,7 +77,7 @@
 
 
     input[type="submit"] {
-      @extend %small_button;
+      @extend %kubik-button--small;
       padding: 8px 12px; margin-right: 1em;
       color: white; border: none; background: var(--kubik-interface-color-brand-500);
       &:hover {
@@ -103,7 +103,7 @@
     }
 
     label {
-      @extend %filter_label;
+      @extend %kubik-filter-label;
       flex: 0 0 100%;
       display: block;
       margin-bottom: 0.5em;
@@ -112,7 +112,7 @@
       font-weight: 700;
     }
     & > select {
-      @extend %filter_dropdown;
+      @extend %kubik-filter-dropdown;
       flex: 1 1 0;
       margin-right: 1px;
       margin-bottom: 0.5em;
@@ -125,13 +125,13 @@
 
 
     input {
-      @extend %filter_field;
+      @extend %kubik-filter-field;
       flex: 1 1 0;
       height: 3em;
 
 
       &.datepicker {
-        @extend %filter_dropdown;
+        @extend %kubik-filter-dropdown;
         height: 3em;
         margin-right: 1px;
         border: none;

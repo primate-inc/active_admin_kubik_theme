@@ -9,7 +9,7 @@
   align-items: center;
 
   .filter_toggle {
-    @extend %action_button;
+    @extend %kubik-action-button;
     display: flex;
     align-items: center;
     position: absolute;

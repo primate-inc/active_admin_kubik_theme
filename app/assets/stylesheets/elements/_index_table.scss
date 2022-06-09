@@ -59,7 +59,7 @@
           border-bottom: 1px solid var(--kubik-interface-color-grey-200);
           padding: 0;
           .member_link {
-            @extend %action_button;
+            @extend %kubik-action-button;
             flex: 1;
             display: flex;
             align-items: center;

@@ -13,7 +13,7 @@
               position: relative;
               display: none;
               .dropdown_menu_button {
-                @extend %filter_dropdown;
+                @extend %kubik-filter-dropdown;
                 flex: 0 1 6.5em;
                 display: inline-block; padding: .5em 1em; margin: .5em .5em;
                 background: var(--kubik-interface-color-brand-400);

@@ -9,7 +9,7 @@
       margin-bottom: 1.5em;
     }
     .attributes_list_attr_name {
-      @extend %label;
+      @extend %kubik-form-label;
     }
     .attributes_list_attr_value {
       @extend %admin_text_view_field;
@@ -17,7 +17,7 @@
   }
   .image {
     .attributes_list_attr_name {
-      @extend %label;
+      @extend %kubik-form-label;
       padding-bottom: 0.5em;
     }
   }
