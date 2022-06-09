@@ -45,7 +45,7 @@
   #error_explanation {
     background-color: var(--kubik-interface-color-alert);
     h2 {
-      @extend .h4;
+      @extend %h4;
       color: var(--kubik-interface-color-white);
     }
     ul {

@@ -9,7 +9,7 @@
 
   }
   h3 {
-    @extend .subtitle;
+    @extend %subtitle;
     padding: 2em 0 0 1.75rem; margin-bottom: 1rem;
     border-bottom: none;
   }
@@ -73,7 +73,7 @@
         }
       }
       .active_admin_comment_body {
-        @extend .para;
+        @extend %para;
         max-width: 50rem;
       }
       .active_admin_comment_meta {
@@ -83,12 +83,12 @@
         align-items: center;
 
         & > span, & > a {
-          @extend .para_small_style;
+          @extend %para--small;
         }
         & > span { display: inline-block; margin-right: 1em }
 
         .active_admin_comment_author {
-          @extend .h4;
+          @extend %h4;
           flex: 1 1 80%;
           order: 0;
           margin: .25em 0;
@@ -114,7 +114,7 @@
       }
     }
     .pagination_information {
-      @extend .para;
+      @extend %para;
       padding: 1rem 0 0 2em;
       color: var(--kubik-interface-color-grey-400);
     }
