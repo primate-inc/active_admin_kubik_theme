@@ -1,5 +1,6 @@
 .button {
   @extend %kubik-button;
+
   &.small {
     @extend %kubik-button--small;
   }
