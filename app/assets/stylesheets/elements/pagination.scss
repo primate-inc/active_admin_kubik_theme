@@ -2,7 +2,7 @@
   #wrapper {
     #index_footer {
       .pagination_information, .download_links {
-        @extend %kubik-typography-para--small;
+        @include kubik-typography-para--small;
         display: inline-block;
         a { @include kubik-link; }
       }
@@ -19,7 +19,7 @@
         }
       }
       .pagination {
-        @extend %kubik-typography-para--small;
+        @include kubik-typography-para--small;
         margin-bottom: var(--kubik-interface-space-100); padding-left: var(--kubik-interface-space-350);
         .page {
           color: var(--kubik-interface-color-brand-400);

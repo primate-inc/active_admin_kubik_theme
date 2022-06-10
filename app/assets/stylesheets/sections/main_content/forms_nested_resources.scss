@@ -7,7 +7,7 @@
     align-items: baseline;
     justify-content: space-between;
     h3 {
-      @extend %kubik-legend;
+      @include kubik-legend;
       margin: 1.25rem 0 1.25rem;
       order: 1;
     }
@@ -33,18 +33,18 @@
         }
       }
       .button.has_many_remove {
-        @extend %kubik-button-nested-remove;
+        @include kubik-button-nested-remove;
       }
       .has_many_delete {
         label {
-          @extend %kubik-form-input-checkbox--white;
+          @include kubik-form-input-checkbox--white;
           padding: 0;
           margin-bottom: 0;
         }
       }
     }
     .button.has_many_add {
-      @extend %kubik-button--secondary;
+      @include kubik-button--secondary;
       width: 100%;
       text-align: center;
       order: 999;

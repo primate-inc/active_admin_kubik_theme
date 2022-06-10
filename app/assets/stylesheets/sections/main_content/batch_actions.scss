@@ -1,7 +1,7 @@
 .logged_in {
   #main_content_wrapper{
-      position: relative;
-    }
+    position: relative;
+  }
 
   #wrapper {
     #active_admin_content {
@@ -12,8 +12,9 @@
               align-items: flex-start;
               position: relative;
               display: none;
+
               .dropdown_menu_button {
-                @extend %kubik-filter-dropdown;
+                @include kubik-filter-dropdown;
                 flex: 0 1 6.5em;
                 display: inline-block; padding: .5em 1em; margin: .5em .5em;
                 background: var(--kubik-interface-color-brand-400);
@@ -31,11 +32,13 @@
                   vertical-align: middle;
                 }
               }
+
               .dropdown_menu_list {
                 position: absolute; margin: -.5em 0 0 .5em; padding: .5em 1em; list-style-type: none;
                 background: var(--kubik-interface-color-white);
                 z-index: 1;
                 box-shadow: .25em .25em .4em 0 rgba(0, 0, 0, 0.3);
+
                 a {
                   @include kubik-link;
                 }

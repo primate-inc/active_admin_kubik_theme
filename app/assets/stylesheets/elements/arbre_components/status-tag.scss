@@ -1,11 +1,9 @@
 .active_admin {
   .status_tag {
-    @extend %standard-pill;
-    &.yes {
-      @extend %active-pill;
-    }
-    &.no {
-      @extend %inactive-pill;
-    }
+    @include kubik-pill;
+
+    &.yes { @include kubik-pill--active; }
+
+    &.no { @include kubik-pill--inactive; }
   }
 }

@@ -11,7 +11,7 @@
   }
 
   h3 {
-    @extend %kubik-typography-subtitle;
+    @include kubik-typography-subtitle;
     padding: 2em 0 0 1.75rem; margin-bottom: 1rem;
     border-bottom: none;
   }
@@ -80,7 +80,7 @@
       }
 
       .active_admin_comment_body {
-        @extend %kubik-typography-para;
+        @include kubik-typography-para;
         max-width: 50rem;
       }
 
@@ -91,13 +91,13 @@
         align-items: center;
 
         & > span, & > a {
-          @extend %kubik-typography-para--small;
+          @include kubik-typography-para--small;
         }
 
         & > span { display: inline-block; margin-right: 1em }
 
         .active_admin_comment_author {
-          @extend %kubik-typography-h4;
+          @include kubik-typography-h4;
           flex: 1 1 80%;
           order: 0;
           margin: .25em 0;
@@ -114,7 +114,7 @@
         }
 
         span {
-          @extend %kubik-form-hint;
+          @include kubik-form-hint;
           order: 2;
           flex: 0 0 100%;
           padding: 0;
@@ -128,7 +128,7 @@
     }
 
     .pagination_information {
-      @extend %kubik-typography-para;
+      @include kubik-typography-para;
       padding: 1rem 0 0 2em;
       color: var(--kubik-interface-color-grey-400);
     }

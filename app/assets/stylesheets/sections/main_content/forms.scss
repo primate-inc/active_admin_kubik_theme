@@ -1,110 +1,133 @@
 .active_admin .formtastic {
   legend {
-    @extend %kubik-legend;
+    @include kubik-legend;
     padding: 1.25rem;
     display: table;
     width: 100%;
     background: white;
     border: 1px solid var(--kubik-interface-color-grey-200);
     border-bottom: 0;
+
     &.label {
       border: 0;
     }
   }
+
   fieldset {
-    @extend %kubik-form-fieldset;
+    @include kubik-form-fieldset;
     margin: 0.9rem 1rem;
+
     &.actions {
       background-color: transparent;
       border: 0;
+
       ol {
         display: flex;
         align-items: center;
         border: 0;
         padding: .9rem 0;
       }
+
       input[type='submit'] {
-        @extend %kubik-button;
+        @include kubik-button;
         margin-right: 1rem;
       }
+
       .cancel a {
-        @extend %kubik-label;
+        @include kubik-label;
       }
     }
   }
+
   // Radio buttons
   .choices {
     margin: 0;
+
     .label { padding: 0; }
     .choices-group {
       padding: 0;
       border: 0;
     }
+
     .choice {
-      @extend %kubik-form-wrapper-checkbox;
+      @include kubik-form-wrapper-checkbox;
+
       input {
-        @extend %kubik-form-input-checkbox;
+        @include kubik-form-input-checkbox;
       }
+
       & > *:not(input) {
         flex: 1;
         display: inline-block;
       }
-
     }
   }
+
   .check_boxes {
     .choices-group {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
+
       .choice {
         flex: 1 1 21rem;
         margin-right: 1rem;
       }
     }
   }
+
   // date select
   .fragments {
     margin: 0;
+
     .fragments-group {
       display: flex;
       flex-direction: row;
       padding: 0;
       border: 0;
+
       .fragment {
         display: flex;
         flex-direction: column;
         margin-right: 1px;
+
         label {
-          @extend %panel_table_header;
+          @include panel_table_header;
         }
+
         select {
-          @extend %kubik-form-input-select;
+          @include kubik-form-input-select;
           border-radius: 0;
         }
+
         &:first-of-type select {
           border-top-left-radius: .2rem;
           border-bottom-left-radius: .2rem;
         }
+
         &:last-of-type select {
           border-top-right-radius: .2rem;
           border-bottom-right-radius: .2rem;
         }
       }
     }
+
     .label {
       padding: 0;
     }
   }
+
   ol {
     margin: 0;
     padding: .9rem 0 0;
     list-style: none;
     border: 1px solid var(--kubik-interface-color-grey-200);
   }
+
   .input {
     padding: 0 1.25rem .9rem;
+
     &.error {
       select, input[type='text'],
       input[type='email'], input[type='password'],
@@ -112,35 +135,45 @@
         border-color: var(--kubik-interface-color-alert);
       }
     }
+
     .label {
-      @extend %kubik-form-label;
+      @include kubik-form-label;
       display: block;
       margin-bottom: .25rem;
     }
+
     &.boolean {
-      label { @extend %kubik-form-wrapper-checkbox; }
-      input { @extend %kubik-form-input-checkbox; }
+      label { @include kubik-form-wrapper-checkbox; }
+      input { @include kubik-form-input-checkbox; }
     }
+
     &.datepicker input {
-      @extend %kubik-form-input-text;
+      @include kubik-form-input-text;
       width: auto;
     }
+
     &.select {
       select {
-        @extend %kubik-form-input-select;
+        @include kubik-form-input-select;
       }
     }
+
     &.hidden { display: none; }
-    &.text textarea { @extend %kubik-form-input-textarea; }
-    &.string input, &.email input, &.password input { @extend %kubik-form-input-text; }
-    .inline-errors { @extend %kubik-form-error-message; }
-    .inline-hints { @extend %kubik-form-hint; }
+
+    &.text textarea { @include kubik-form-input-textarea; }
+
+    &.string input, &.email input, &.password input { @include kubik-form-input-text; }
+
+    .inline-errors { @include kubik-form-error-message; }
+
+    .inline-hints { @include kubik-form-hint; }
   }
 }
 
 .active_admin .formtastic {
   .tabs + fieldset.actions {
     background: var(--kubik-interface-color-grey-100);
+
     ol {
       padding: 0;
       border: 0;

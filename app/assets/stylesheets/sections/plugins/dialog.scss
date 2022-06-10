@@ -52,14 +52,14 @@
       color: var(--kubik-interface-color-black);
       border: 1px solid var(--kubik-interface-color-grey-200);
       button {
-        @extend %kubik-button;
+        @include kubik-button;
       }
     }
     &-buttonset {
       display: flex;
       justify-content: space-between;
       .ui-button:nth-child(2) {
-        @extend %kubik-label;
+        @include kubik-label;
       }
     }
     &-content ul:empty {

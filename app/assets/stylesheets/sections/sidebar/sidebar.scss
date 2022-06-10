@@ -1,0 +1,29 @@
+.index.logged_in #wrapper #active_admin_content.with_sidebar {
+  .sidebar {
+    max-width: 0;
+    height: calc(100% - 230px);
+    position: absolute;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: max-width .25s;
+    top: 180px;
+
+    &.expanded {
+      max-width: 27rem;
+    }
+
+    @media screen and (min-width: 75em) {
+      top: 120px;
+      height: calc(100% - 170px);
+    }
+
+    .attributes_table {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

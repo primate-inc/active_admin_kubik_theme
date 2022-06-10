@@ -29,7 +29,7 @@
     padding: .5rem;
 
     label {
-      @extend %kubik-label;
+      @include kubik-label;
     }
   }
 }

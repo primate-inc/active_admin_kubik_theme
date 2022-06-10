@@ -10,14 +10,14 @@
       padding: .5rem;
     }
     h3 {
-      @extend %kubik-value;
+      @include kubik-value;
       margin: 0;
       a {
         color: var(--kubik-interface-color-brand-400);
       }
     }
     .content {
-      @extend %kubik-value;
+      @include kubik-value;
       flex: 0 0 calc(100% - 2.25rem);
       margin-left: 2.25rem;
       padding-bottom: .5rem;
@@ -27,7 +27,7 @@
   .resource_selection_toggle_panel {
     padding: .5rem;
     label {
-      @extend %kubik-label;
+      @include kubik-label;
     }
   }
 }

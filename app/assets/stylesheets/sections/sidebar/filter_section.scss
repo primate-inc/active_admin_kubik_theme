@@ -1,0 +1,104 @@
+#filters_sidebar_section {
+  @include kubik-container--brand;
+  background: var(--kubik-interface-color-grey-100);
+  justify-content: center;
+
+  .clear_filters_btn {
+    @include kubik-link-tab;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .filter_form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+
+    .buttons {
+      flex: 0 0 100%;
+      padding: .5em 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+
+
+      input[type="submit"] {
+        @include kubik-button--small;
+        padding: 8px 12px; margin-right: 1em;
+        color: white; border: none; background: var(--kubik-interface-color-brand-500);
+
+        &:hover {
+          background: var(--kubik-interface-color-brand-600);
+        }
+
+        &:before {
+          content: ' ';
+          display: inline-block; width: 20px; height: 20px; margin-right: .25em;
+          background: image-url('svgs/tick.svg') no-repeat;
+        }
+      }
+    }
+
+    .input {
+      display: flex;
+      padding: 0.5em 0;
+      align-items: center;
+      flex: 1 1 calc(50% - 12rem);
+      flex-wrap: wrap;
+
+      select + input {
+        margin-bottom: 0.5em;
+      }
+
+      label {
+        @include kubik-filter-label;
+        flex: 0 0 100%;
+        display: block;
+        margin-bottom: 0.5em;
+        white-space: pre-wrap;
+        color: var(--kubik-interface-color-brand-400);
+        font-weight: 700;
+      }
+
+      & > select {
+        @include kubik-filter-dropdown;
+        flex: 1 1 0;
+        margin-right: 1px;
+        margin-bottom: 0.5em;
+        cursor: pointer;
+        background: var(--kubik-interface-color-white);
+        color: var(--kubik-interface-color--black);
+        height: 3em;
+      }
+
+      input {
+        @include kubik-filter-field;
+        flex: 1 1 0;
+        height: 3em;
+
+        &.datepicker {
+          @include kubik-filter-dropdown;
+          height: 3em;
+          margin-right: 1px;
+          border: none;
+          cursor: pointer;
+          background: var(--kubik-interface-color-white);
+          color: var(--kubik-interface-color--black);
+
+          &:focus {
+            border-color: white;
+            color: white;
+          }
+        }
+      }
+
+      input::placeholder {
+        color: black;
+      }
+    }
+  }
+}

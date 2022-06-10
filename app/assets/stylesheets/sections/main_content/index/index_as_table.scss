@@ -18,6 +18,7 @@
     tbody {
       display: flex;
       flex-direction: column;
+
       tr {
         flex: 1;
         display: flex;
@@ -26,8 +27,9 @@
         padding: 0;
         padding-top: var(--kubik-interface-space-400);
         background-color: var(--kubik-interface-color-white);
+
         td {
-          @include table_normal_cell;
+          @include kubik-table-cell;
           display: flex;
           flex-direction: row;
           align-items: baseline;
@@ -47,6 +49,7 @@
               font-weight: 600;
             }
           }
+
           &.col-selectable {
             display: none;
           }
@@ -59,18 +62,21 @@
             background-color: var(--kubik-interface-color-white);
           }
         }
+
         .col-actions {
           border-top: 1px solid var(--kubik-interface-color-grey-200);
           border-bottom: 1px solid var(--kubik-interface-color-grey-200);
           padding: 0;
+
           .member_link {
-            @extend %kubik-action-button;
+            @include kubik-action-button;
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             border-right: 0;
           }
+
           .table_actions {
             height: 3.75rem;
             flex: 1;
@@ -79,6 +85,7 @@
         }
       }
     }
+
     tr + tr + tr {
       .st-head-row {
         padding-top: var(--kubik-interface-space-1000);
@@ -98,7 +105,7 @@
 
         tr {
           th {
-            @include table_header_cell;
+            @include kubik-table-header-cell;
 
             a {
               position: relative;
@@ -153,7 +160,7 @@
           margin: 0;
 
           td {
-            @include table_normal_cell;
+            @include kubik-table-cell;
             display: table-cell;
             width: auto;
             padding: var(--kubik-interface-space-300) var(--kubik-interface-space-200);
