@@ -2,14 +2,16 @@
   list-style: none;
   margin: 0;
   padding: 1rem 0 0;
+
   a {
-    @extend %nav_link;
+    @include kubik-link-nav;
     padding: .5em 1.5em;
     display: block;
     &:hover {
       color: var(--kubik-interface-color-brand-400);
     }
   }
+
   li {
     &.has_nested {
       > a {
@@ -21,27 +23,32 @@
           transform: rotate(-135deg); transition: 0.2s;
           vertical-align: middle;
         }
+
         &:hover:after {
           border-color: var(--kubik-interface-color-brand-400);
         }
       }
     }
+
     &.has_nested.active { // revealing dropdown
       ul {
         max-height: 300px;
         transition: max-height 0.2s;
       }
+
       > a {
         &:after {
           transform: rotate(45deg);
         }
       }
     }
+
     &.has_nested.current { // on page within dropdown
       ul {
         max-height: 300px;
         transition: max-height 0.2s;
       }
+
       > a {
         &:after {
           border: solid var(--kubik-interface-color-brand-400); border-width: 0 2px 2px 0;
@@ -49,10 +56,12 @@
         }
       }
     }
+
     &.current {
       > a {
-        @extend %nav_link_active;
+        @include kubik-link-nav--active;
         background-color: var(--kubik-interface-color-black);
+
         &:hover {
           color: var(--kubik-interface-color-brand-400);
           background-color: var(--kubik-interface-color-black);
@@ -61,14 +70,17 @@
           }
         }
       }
+
       ul a {
         background-color: var(--kubik-interface-color-black);
       }
     }
+
     ul {
       max-height: 0; padding: 0;
       transition: max-height 0.2s;
       overflow: hidden;
+
       li {
         a{
           padding-left: 3em !important;

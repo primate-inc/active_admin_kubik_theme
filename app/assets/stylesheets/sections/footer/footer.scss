@@ -10,5 +10,5 @@
     @extend %kubik-typography-para--small;
     margin: 0;
   }
-  a { @extend %general_link; }
+  a { @include kubik-link; }
 }

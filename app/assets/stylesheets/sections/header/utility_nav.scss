@@ -15,10 +15,11 @@
   }
 
   #current_user {
-    @extend %user_link;
+    @include kubik-link-user;
     display: flex;
     align-items: center;
     margin-right: 1em;
+
     @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
       &:before {
         content: ' ';
@@ -30,6 +31,6 @@
     }
   }
   #logout {
-    @extend %sign_out_link;
+    @include kubik-link-sign-out;
   }
 }

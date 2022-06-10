@@ -37,7 +37,7 @@
                 z-index: 1;
                 box-shadow: .25em .25em .4em 0 rgba(0, 0, 0, 0.3);
                 a {
-                  @extend %general_link;
+                  @include kubik-link;
                 }
               }
             }

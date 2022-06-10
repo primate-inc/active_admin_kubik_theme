@@ -26,7 +26,7 @@
 }
 
 .clear_filters_btn {
-  @extend %tab_link;
+  @include kubik-link-tab;
   text-decoration: none;
   transition: .2s;
   &:hover {

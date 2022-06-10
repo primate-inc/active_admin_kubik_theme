@@ -4,7 +4,7 @@
       .pagination_information, .download_links {
         @extend %kubik-typography-para--small;
         display: inline-block;
-        a { @extend %general_link; }
+        a { @include kubik-link; }
       }
       .pagination_information, .download_links span {
         padding-left: 1em;
@@ -38,7 +38,7 @@
           }
         }
         .next a, .last a, .prev a, .first a {
-          @extend %general_link;
+          @include kubik-link;
         }
       }
     }
