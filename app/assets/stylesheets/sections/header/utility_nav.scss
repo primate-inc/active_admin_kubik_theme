@@ -8,6 +8,7 @@
   .menu_item {
     display: inline-block;
     transition: 0.2s;
+
     a {
       color: inherit;
       &:hover { color: white; }
@@ -30,6 +31,7 @@
       }
     }
   }
+
   #logout {
     @include kubik-link-sign-out;
   }

@@ -6,11 +6,13 @@
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
+
     h3 {
       @include kubik-legend;
       margin: 1.25rem 0 1.25rem;
       order: 1;
     }
+
     .has_many_fields {
       order: 3;
       flex: 0 0 100%;
@@ -18,23 +20,29 @@
       padding: 1rem 1.25rem;
       border: 1px solid var(--kubik-interface-color-grey-200);
       border-radius: 3px;
+
       &:last-of-type {
         margin-top: 0;
         margin-bottom: .75rem;
       }
+
       ol {
         padding-top: 0;
         border: 0;
       }
+
       .input {
         padding: 0 0 .9rem;
+
         &:last-of-type {
           padding-bottom: 0;
         }
       }
+
       .button.has_many_remove {
         @include kubik-button-nested-remove;
       }
+
       .has_many_delete {
         label {
           @include kubik-form-input-checkbox--white;
@@ -43,6 +51,7 @@
         }
       }
     }
+
     .button.has_many_add {
       @include kubik-button--secondary;
       width: 100%;

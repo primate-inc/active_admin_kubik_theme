@@ -43,6 +43,7 @@
         span {display: none; }
       }
     }
+
     &-buttonpane {
       padding: .8rem 1.25rem;
 
@@ -51,22 +52,27 @@
       font-weight: 700;
       color: var(--kubik-interface-color-black);
       border: 1px solid var(--kubik-interface-color-grey-200);
+
       button {
         @include kubik-button;
       }
     }
+
     &-buttonset {
       display: flex;
       justify-content: space-between;
+
       .ui-button:nth-child(2) {
         @include kubik-label;
       }
     }
+
     &-content ul:empty {
       display: none;
     }
   }
 }
+
 .ui-widget-overlay {
   position: absolute;
   top: 0;

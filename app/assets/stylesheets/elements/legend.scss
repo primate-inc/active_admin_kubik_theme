@@ -1,0 +1,15 @@
+.active_admin .formtastic {
+    legend {
+        @include kubik-legend;
+        padding: 1.25rem;
+        display: table;
+        width: 100%;
+        background: white;
+        border: 1px solid var(--kubik-interface-color-grey-200);
+        border-bottom: 0;
+
+        &.label {
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.active_admin .formtastic {
+// Radio buttons
+  .choices {
+    margin: 0;
+
+    .label { padding: 0; }
+    .choices-group {
+      padding: 0;
+      border: 0;
+    }
+
+    .choice {
+      @include kubik-form-wrapper-checkbox;
+
+      input {
+        @include kubik-form-input-checkbox;
+      }
+
+      & > *:not(input) {
+        flex: 1;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
   background: var(--kubik-interface-color-header);
 
   .header-item { list-style: none; }
+
   .kubik_header_toggle {
     @extend %open-close-icon;
     align-self: flex-end;
@@ -17,6 +18,7 @@
 
     &:hover { cursor: pointer; }
   }
+
   #site_title {
     order: 0;
     padding: 0 1.5rem;
@@ -26,6 +28,7 @@
     font-size: 1rem;
     font-weight: 700;
     color: var(--kubik-interface-color-white);
+
     img { margin-bottom: 1em; width: 100%; }
   }
 }

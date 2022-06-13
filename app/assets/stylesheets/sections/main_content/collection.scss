@@ -1,7 +1,9 @@
 #collection_selection {
   flex: 1;
+
   &.sidebar_expanded {
     position: relative;
+
     &::before{
       display: block;
       position: absolute;
@@ -19,16 +21,20 @@
     }
   }
 }
+
 #collection_selection {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 #main_content {
   display: flex;
   flex-direction: column;
+
   form, .tabs { flex: 1; }
 }
+
 #main_content_wrapper {
   display: flex;
 }

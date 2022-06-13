@@ -6,9 +6,11 @@
 
 #footer {
   padding: 1em;
+
   p {
     @include kubik-typography-para--small;
     margin: 0;
   }
+
   a { @include kubik-link; }
 }
