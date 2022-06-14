@@ -1,0 +1,44 @@
+.active_admin .formtastic {
+  fieldset {
+    @include kubik-form-fieldset;
+    margin: 0.9rem 1rem;
+
+    &.actions {
+      background-color: transparent;
+      border: 0;
+
+      ol {
+        display: flex;
+        align-items: center;
+        border: 0;
+        padding: .9rem 0;
+      }
+
+      input[type='submit'] {
+        @include kubik-button;
+        margin-right: 1rem;
+      }
+
+      .cancel a {
+        @include kubik-label;
+      }
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding: .9rem 0 0;
+    list-style: none;
+    border: 1px solid var(--kubik-interface-color-grey-200);
+  }
+
+  .tabs + fieldset.actions {
+    background: var(--kubik-interface-color-grey-100);
+
+    ol {
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+

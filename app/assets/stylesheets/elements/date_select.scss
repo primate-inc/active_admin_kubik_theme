@@ -1,0 +1,42 @@
+.active_admin .formtastic {
+  // date select
+  .fragments {
+    margin: 0;
+
+    .fragments-group {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      border: 0;
+
+      .fragment {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1px;
+
+        label {
+          @include panel_table_header;
+        }
+
+        select {
+          @include kubik-form-input-select;
+          border-radius: 0;
+        }
+
+        &:first-of-type select {
+          border-top-left-radius: .2rem;
+          border-bottom-left-radius: .2rem;
+        }
+
+        &:last-of-type select {
+          border-top-right-radius: .2rem;
+          border-bottom-right-radius: .2rem;
+        }
+      }
+    }
+
+    .label {
+      padding: 0;
+    }
+  }
+}

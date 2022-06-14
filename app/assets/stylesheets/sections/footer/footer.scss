@@ -1,0 +1,16 @@
+#index_footer {
+  @include kubik-typography-para--small;
+  padding: 1em 0;
+  background-color: var(--kubik-interface-color-grey-100);
+}
+
+#footer {
+  padding: 1em;
+
+  p {
+    @include kubik-typography-para--small;
+    margin: 0;
+  }
+
+  a { @include kubik-link; }
+}

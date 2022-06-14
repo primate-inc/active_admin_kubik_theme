@@ -1,0 +1,45 @@
+.active_admin .formtastic {
+  .input {
+    padding: 0 1.25rem .9rem;
+
+    &.error {
+      select, input[type='text'],
+      input[type='email'], input[type='password'],
+      input[type='number'] {
+        border-color: var(--kubik-interface-color-alert);
+      }
+    }
+
+    .label {
+      @include kubik-form-label;
+      display: block;
+      margin-bottom: .25rem;
+    }
+
+    &.boolean {
+      label { @include kubik-form-wrapper-checkbox; }
+      input { @include kubik-form-input-checkbox; }
+    }
+
+    &.datepicker input {
+      @include kubik-form-input-text;
+      width: auto;
+    }
+
+    &.select {
+      select {
+        @include kubik-form-input-select;
+      }
+    }
+
+    &.hidden { display: none; }
+
+    &.text textarea { @include kubik-form-input-textarea; }
+
+    &.string input, &.email input, &.password input { @include kubik-form-input-text; }
+
+    .inline-errors { @include kubik-form-error-message; }
+
+    .inline-hints { @include kubik-form-hint; }
+  }
+}

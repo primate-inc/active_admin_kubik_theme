@@ -1,0 +1,31 @@
+.active_admin.logged_in {
+  #titlebar_left {
+    .breadcrumb {
+      margin-right: var(--kubik-interface-space-100);
+
+      a { @include kubik-link-title; }
+
+      .breadcrumb_sep {
+        display: inline-block;
+        margin: 0 var(--kubik-interface-space-200) 0 var(--kubik-interface-space-200);
+        padding: var(--kubik-interface-space-010);
+        font-size: 0;
+        border: solid var(--kubik-interface-color-brand-400);
+        border-width: 0 2px 2px 0;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+      }
+    }
+
+    h2 {
+      @include kubik-typography-title;
+      display: inline-block;
+    }
+
+    .breadcrumb #page_title {
+      @include kubik-typography-h1;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

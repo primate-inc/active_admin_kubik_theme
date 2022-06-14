@@ -1,0 +1,38 @@
+.active_admin #utility_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 1.5rem;
+
+  .menu_item {
+    display: inline-block;
+    transition: 0.2s;
+
+    a {
+      color: inherit;
+      &:hover { color: white; }
+    }
+  }
+
+  #current_user {
+    @include kubik-link-user;
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+
+    @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
+      &:before {
+        content: ' ';
+        display: inline-block; width: 20px; height: 20px; margin-right: .25em; margin-left: -.25em;
+        background-color: var(--kubik-interface-color-brand-400);
+        -webkit-mask-image: image-url("svgs/user.svg");
+        mask-image: image-url("svgs/user.svg");
+      }
+    }
+  }
+
+  #logout {
+    @include kubik-link-sign-out;
+  }
+}

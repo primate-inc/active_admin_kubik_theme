@@ -1,0 +1,110 @@
+.logged_out {
+  background: var(--kubik-interface-color-white);
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    @media screen and (min-width: 55em) {
+      flex-direction: row;
+    }
+  }
+  #content_wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .flashes {
+    width: clamp(300px, 75%, 500px);
+  }
+
+  #footer {
+    width: 100%;
+    flex: 0 0 30vw;
+    background-color: var(--kubik-interface-color-black);
+    background-image: image-url('svgs/branded-sidebar-mobile.svg');
+    background-size: cover;
+    @media screen and (min-width: 55em) {
+      flex: 0 0 380px;
+      background-size: cover;
+      background-image: image-url('svgs/branded-sidebar.svg');
+      background-position: 0 50%;
+    }
+  }
+
+  .flash_alert {
+    @include kubik-container--alert;
+  }
+  #active_admin_content {
+    background-color: white;
+    border-radius: 3px;
+    width: clamp(300px, 75%, 500px);
+  }
+  #error_explanation {
+    background-color: var(--kubik-interface-color-alert);
+    h2 {
+      @include kubik-typography-h4;
+      color: var(--kubik-interface-color-white);
+    }
+    ul {
+      margin: 0; padding: 0;
+      list-style-type: none;
+    }
+  }
+  #login {
+    border: 1px solid var(--kubik-interface-color-grey-200);
+    border-radius: 3px;
+    padding-bottom: 1.25rem;
+    h2 {
+      margin: 0;
+      padding: 1.25rem;
+      color: var(--kubik-interface-color-black);
+      font-size: var(--kubik-interface-base-font-size);
+      font-weight: 700;
+      border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+    }
+    form {
+      background: var(--kubik-interface-color-white);
+      padding: 1.25rem;
+      fieldset {
+        margin: 0;
+        padding: 0;
+        ol {
+          border: 0;
+          padding-bottom: 1.25rem;
+        }
+        &.actions {
+          ol { padding: 0; }
+        }
+        .input {
+          padding: 0 0 .9rem;
+        }
+        .input:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+      .boolean label {
+        @include kubik-form-input-checkbox--white;
+        padding-left: 0;
+      }
+    }
+
+    a {
+      display: block;
+      margin: 1.25rem;
+      color: var(--kubik-interface-color-brand-400);
+      font-size: var(--kubik-interface-font-size-small);
+      font-weight: 700;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+    }
+    br { display: none; }
+  }
+}

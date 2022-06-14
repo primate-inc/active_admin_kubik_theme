@@ -1,0 +1,21 @@
+#active_admin_content {
+  .nav-tabs {
+    @extend %slickr_tabs;
+    border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+
+    > li > a { @extend %slickr_tab; }
+  }
+
+  .ui-tabs-nav {
+    @extend %slickr_tabs;
+    margin-bottom: 0;
+
+    .ui-tabs-tab {
+      &.ui-tabs-active a { @extend %slickr_active_tab; }
+    }
+  }
+
+  .tab-content {
+    margin: .9rem 0;
+  }
+}

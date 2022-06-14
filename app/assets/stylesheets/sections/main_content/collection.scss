@@ -1,0 +1,40 @@
+#collection_selection {
+  flex: 1;
+
+  &.sidebar_expanded {
+    position: relative;
+
+    &::before{
+      display: block;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: calc(100% - 60px);
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(51, 51, 51, 0.6);
+      border-top: 1px solid var(--kubik-interface-color-grey-200);
+      border-bottom: 1px solid var(--kubik-interface-color-grey-200);
+      z-index: 1;
+    }
+  }
+}
+
+#collection_selection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#main_content {
+  display: flex;
+  flex-direction: column;
+
+  form, .tabs { flex: 1; }
+}
+
+#main_content_wrapper {
+  display: flex;
+}

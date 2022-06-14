@@ -1,0 +1,117 @@
+.logged_in {
+  #titlebar_right {
+    .action_items {
+      height: 100%;
+      display: flex;
+
+      span.action_item,
+      #title_bar .action_items div.action_item {
+        @include kubik-action-button;
+        display: flex;
+        align-items: center;
+
+        svg { fill: var(--kubik-interface-color-brand-400);}
+
+        &:last-of-type {
+          border-right: .1em solid var(--kubik-interface-color-grey-200);
+        }
+
+        &:empty {
+          display: none;
+        }
+
+        @media screen and (min-width: 75em) {
+          &:last-of-type {
+            border-right: 0;
+          }
+        }
+
+        a { color: inherit; }
+      }
+
+      div.action_item {
+        &.active {
+          background: var(--kubik-interface-color-brand-400);
+          color: var(--kubik-interface-color-white);
+
+          svg { fill: var(--kubik-interface-color-white); }
+        }
+
+        .arrow {
+          padding-right: 1.2em;
+
+          svg { transition: .2s; }
+        }
+
+        &:hover {
+          > svg { fill: var(--kubik-interface-color-white); }
+
+          .arrow svg { transform: rotate(180deg) }
+
+          span svg { fill: var(--kubik-interface-color-brand-400); }
+        }
+      }
+    }
+  }
+}
+
+// FIXME: Update class names/layouts. This was pulled from Slickr CMS but I think its broken with some version of ActiveAdmin.
+.logged_in {
+  .action_item.dropdown_item {
+    display: flex; align-items: center;
+    width: 12em;
+    justify-content: space-between;
+    transition: .2s;
+
+    .arrow svg { fill: var(--kubik-interface-color-brand-400) !important; }
+
+    &.active {
+      color: var(--kubik-interface-color-brand-400) !important;
+      background: var(--kubik-interface-color-white) !important;
+
+      svg { fill: var(--kubik-interface-color-white) }
+
+    }
+
+    &:hover {
+      background-color: var(--kubik-interface-color-grey-100);
+
+      .dropdown_container a {
+        background-color: var(--kubik-interface-color-grey-100);
+      }
+    }
+  }
+
+  .dropdown_container {
+    position: relative; height: 100%;
+
+    a {
+      @include kubik-action-button;
+      display: flex; align-items: center;
+    }
+
+    .action_item_dropdown {
+      display: flex;
+      flex-direction: column;
+      position: absolute; top: 4em; width: 12em;
+      background: white; color: var(--kubik-interface-color-brand-400);
+      border-left: 2px solid var(--kubik-interface-color-white); border-right: 2px solid var(--kubik-interface-color-white); border-bottom: 2px solid var(--kubik-interface-color-white);
+
+      span {
+        display: flex; padding: 8px 12px; height: 2em;
+        transition: .2s;
+
+        svg {fill: var(--kubik-interface-color-brand-400); transition: .2s; }
+
+        &:hover svg {
+          fill: var(--kubik-interface-color-white) !important;
+        }
+      }
+
+      span:hover { background: var(--kubik-interface-color-brand-400); color: white; cursor: pointer; }
+
+      svg { width: 20px; height: 20px; fill: var(--kubik-interface-color-brand-400); }
+    }
+  }
+}
+

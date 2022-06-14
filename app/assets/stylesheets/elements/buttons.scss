@@ -1,0 +1,7 @@
+.button {
+  @include kubik-button;
+
+  &.small {
+    @include kubik-button--small;
+  }
+}

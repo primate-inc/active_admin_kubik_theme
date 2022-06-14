@@ -1,0 +1,16 @@
+.h1 { @include kubik-typography-h1; }
+.h2 { @include kubik-typography-h2; }
+.h3 { @include kubik-typography-h3; }
+.h4 { @include kubik-typography-h4; }
+.h5 { @include kubik-typography-h5; }
+.h6 { @include kubik-typography-h6; }
+
+.para {
+  @include kubik-typography-para;
+
+  &--small { @include kubik-typography-para--small; }
+}
+
+.subtitle { @include kubik-typography-subtitle; }
+
+.link { @include kubik-typography-link; }

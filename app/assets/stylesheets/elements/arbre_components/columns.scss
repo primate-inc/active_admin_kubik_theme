@@ -1,0 +1,12 @@
+.active_admin {
+  .columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .column {
+      flex: 1 1 49%;
+      min-width: 30rem;
+    }
+  }
+}

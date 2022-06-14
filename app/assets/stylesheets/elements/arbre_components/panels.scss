@@ -1,0 +1,27 @@
+.active_admin {
+  .panel:not(.comments) {
+    padding: 2rem 0;
+
+    > h3 {
+      margin-top: 0;
+      padding: 0 var(--kubik-interface-space-400);
+      font-size: var(--kubik-interface-base-font-size);
+      font-weight: 700;
+    }
+
+    .kubik_panel_table {
+      @include panel_table;
+
+      tr {
+        @include panel_table_row;
+      }
+    }
+  }
+
+  &.show .panel:not(.comments) {
+    > h3 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
