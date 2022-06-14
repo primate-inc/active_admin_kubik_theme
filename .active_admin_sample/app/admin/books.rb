@@ -3,7 +3,7 @@ ActiveAdmin.register Book do
 
   config.per_page = 5
 
-  permit_params :title, :genre, :book_author_id, :genres,
+  permit_params :title, :genre, :book_author_id, genres:[],
                 book_editions_attributes: [:edition_name, :_destroy, :id, :'published_date(1i)', :'published_date(2i)', :'published_date(3i)']
 
 
