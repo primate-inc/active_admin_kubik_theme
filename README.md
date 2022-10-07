@@ -1,15 +1,13 @@
-# ActiveAdminSlickr
+# ActiveAdminKubik
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/active_admin_slickr`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Replace your default ActiveAdmin theme with a glossy Kubik theme
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'active_admin_slickr'
+gem 'active_admin_kubik', github: 'kubik-cms/active_admin_kubik_theme'
 ```
 
 And then execute:
@@ -18,15 +16,9 @@ And then execute:
 bundle
 ```
 
-Or install it yourself as:
-
-```bash
-gem install active_admin_slickr
-```
-
 ## Stylesheets
 
-Firstly, please comment out the default Active Admin stylesheets.
+Firstly, please remove the default Active Admin stylesheets.
 
 ```css
 // Active Admin's got SASS!
@@ -34,19 +26,18 @@ Firstly, please comment out the default Active Admin stylesheets.
 // @import "active_admin/base";
 ```
 
-Then add the following in `active_admin.scss`:
+Then add the following in `app/assets/active_admin.scss`:
 
 ```css
-@import 'active_admin_slickr';
+@import 'active_admin_kubik';
 ```
 
 ## Javascript
-- In the `active_admin.js` file, you require `active_admin_slickr`.
+- In the `active_admin.js` file, you require `active_admin_kubik`.
 
 ```javascript
 //= require active_admin/base
-
-//= require active_admin_slickr
+//= require active_admin_kubik
 ```
 
 ## Additions to Active Admin
@@ -89,7 +80,7 @@ input :book_ids,
 
 ensuring that you keep the class ```chosen-select```.
 
-Additionally, you can add the class ```chosen-select chosen-select-ordered``` and your input will save in order which items are selected. By default, a multiselect will save in the order of the options within the multi-select. 
+Additionally, you can add the class ```chosen-select chosen-select-ordered``` and your input will save in order which items are selected. By default, a multiselect will save in the order of the options within the multi-select.
 
 With this in place you now have a ready to use multi select that will save an array of book ids.
 
@@ -133,7 +124,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/active_admin_slickr.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/active_admin_kubik.
 
 
 ## License
