@@ -6,7 +6,6 @@
 
       span.action_item,
       #title_bar .action_items div.action_item {
-        @include kubik-action-button;
         display: flex;
         align-items: center;
 
@@ -26,7 +25,10 @@
           }
         }
 
-        a { color: inherit; }
+        a {
+          @include kubik-action-button;
+          padding: var(--kubik-interface-space-400);
+        }
       }
 
       div.action_item {
