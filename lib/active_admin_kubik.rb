@@ -1,4 +1,3 @@
-require "active_admin_kubik/version"
 require "chosen-rails"
 
 module ActiveAdminKubik
