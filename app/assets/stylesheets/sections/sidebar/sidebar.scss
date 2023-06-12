@@ -24,11 +24,19 @@
     .attributes_table {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+}
+.active_admin #wrapper #active_admin_content.with_sidebar {
+  .sidebar {
+    .attributes_table {
+      margin-left: 0;
+      margin-right: 0;
       @media screen and (min-width: 75em) {
         margin-left: 0;
         margin-right: 0;
       }
     }
-
   }
 }
+```
