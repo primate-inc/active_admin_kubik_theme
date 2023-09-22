@@ -14,6 +14,8 @@
 
       input {
         @include kubik-form-input-checkbox;
+        flex: 0 0 1rem;
+        line-height: 1;
       }
 
       & > *:not(input) {
