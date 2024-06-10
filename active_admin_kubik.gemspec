@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'active_admin_kubik'
-  spec.version       = '0.2.6'
+  spec.version       = '0.2.7'
   spec.authors       = ['Primate']
   spec.email         = ['admin@primate.co.uk']
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", ">= 12.3.3"
 
-  spec.add_dependency "chosen-rails", "~> 1.9.0"
+  #spec.add_dependency "chosen-rails", "~> 1.9.0"
 end

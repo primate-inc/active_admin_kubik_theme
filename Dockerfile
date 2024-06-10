@@ -1,4 +1,4 @@
-FROM node
+FROM node:16
 MAINTAINER Bart Oleszczyk <bart@primate.co.uk>
 ENV APP_PATH /active_admin_kubik
 RUN mkdir /active_admin_kubik

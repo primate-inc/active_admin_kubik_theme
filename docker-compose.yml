@@ -6,18 +6,18 @@ volumes:
   gem_cache:
   shared_data:
 services:
-  # source:
-    #  build:
-    #    contenxt: .
-    #    dockerfile: Dockerfile
-    #  volumes:
-    #    - ./:/active_admin_kubik
-    #  tty: true
-    #  stdin_open: true
-    #  build: .
-    #  command: yarn parcel watch
-    #  ports:
-    #    - "8080:8080"
+  source:
+    build:
+      contenxt: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/active_admin_kubik
+    tty: true
+    stdin_open: true
+    build: .
+    command: yarn parcel watch
+    ports:
+      - "8080:8080"
   active_admin_sample_redis:
     image: redis:4.0-alpine
     command: redis-server
