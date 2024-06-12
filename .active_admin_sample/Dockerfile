@@ -26,6 +26,7 @@ less \
 && mkdir -p $APP_PATH
 
 WORKDIR $APP_PATH
+RUN gem update --system 3.3.22
 
 RUN gem install bundler --version "$BUNDLE_VERSION" \
     && rm -rf $GEM_HOME/cache/*
