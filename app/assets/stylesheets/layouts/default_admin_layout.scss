@@ -59,7 +59,7 @@
             }
           }
           @media screen and (min-width: 75em) {
-            width: clamp(23rem, 25vw, 450px);
+            width: #{"clamp(23rem, 25vw, 450px)"};
           }
         }
       }

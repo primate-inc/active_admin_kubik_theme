@@ -17,7 +17,7 @@
     margin-bottom: 2rem;
   }
   .flashes {
-    width: clamp(300px, 75%, 500px);
+    width: #{"clamp(300px, 75%, 500px)"};
   }
 
   #footer {
@@ -40,7 +40,7 @@
   #active_admin_content {
     background-color: white;
     border-radius: 3px;
-    width: clamp(300px, 75%, 500px);
+    width: #{"clamp(300px, 75%, 500px)"};
   }
   #error_explanation {
     background-color: var(--kubik-interface-color-alert);
