@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'active_admin_kubik'
-  spec.version       = '0.2.8'
+  spec.version       = '0.2.9'
   spec.authors       = ['Primate']
   spec.email         = ['admin@primate.co.uk']
 
