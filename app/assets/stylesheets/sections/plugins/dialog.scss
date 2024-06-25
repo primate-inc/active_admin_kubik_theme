@@ -36,7 +36,7 @@
           content: ' ';
           position: absolute;
           filter: brightness(0.5);
-          background: image-url('svgs/cross.svg') no-repeat;
+          background: #{"url('svgs/cross.svg')"} no-repeat;
           display: inline-block; width: 20px; height: 20px;
         }
 

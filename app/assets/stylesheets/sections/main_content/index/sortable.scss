@@ -8,7 +8,7 @@
     li.handle {
       position: absolute;
       top: 0; left: 0;
-      background: image-url('svgs/grab.svg') no-repeat;
+      background: #{"url('svgs/grab.svg')"} no-repeat;
       cursor: pointer;
       color: transparent;
 
