@@ -26,8 +26,8 @@
         content: ' ';
         display: inline-block; width: 20px; height: 20px; margin-right: .25em; margin-left: -.25em;
         background-color: var(--kubik-interface-color-brand-400);
-        -webkit-mask-image: asset_path("svgs/user.svg");
-        mask-image: asset_path("svgs/user.svg");
+        -webkit-mask-image: url("svgs/user.svg");
+        mask-image: url("svgs/user.svg");
       }
     }
   }
