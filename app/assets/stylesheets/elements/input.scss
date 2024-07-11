@@ -36,7 +36,7 @@
 
     &.text textarea { @include kubik-form-input-textarea; }
 
-    &.string input, &.email input, &.password input { @include kubik-form-input-text; }
+    &.string input, &.email input, &.password input, &.numeric input { @include kubik-form-input-text; }
 
     .inline-errors { @include kubik-form-error-message; }
 
