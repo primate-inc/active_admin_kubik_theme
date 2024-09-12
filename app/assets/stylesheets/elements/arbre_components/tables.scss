@@ -91,6 +91,12 @@
   }
 }
 
+.active_admin .with_sidebar #sidebar {
+  .attributes_table {
+    margin: 0;
+  }
+}
+
 .active_admin .without_sidebar #main_content_wrapper .tabs,
 .active_admin .without_sidebar #main_content_wrapper {
   .attributes_table {
